@@ -1,10 +1,10 @@
 import { Injectable, Injector } from '@angular/core';
-import { McbHttpClient } from '../../../../../portal/http/http-client';
+import { NgHttpClient } from '../../../../../portal/http/http-client';
 
 @Injectable({
   providedIn: 'root'
 })
-export class InfraHttp extends McbHttpClient {
+export class InfraHttp extends NgHttpClient {
   constructor(injector: Injector) {
     super('api/', injector);
   }

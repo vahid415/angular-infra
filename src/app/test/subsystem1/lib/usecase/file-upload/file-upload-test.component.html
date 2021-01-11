@@ -1,8 +1,8 @@
-<mcb-main-panel>
-  <mcb-form-control [labelKey]="'bank-country-label'">
+<ng-main-panel>
+  <ng-form-control [labelKey]="'bank-country-label'">
     <kendo-dropdownlist kendoButton [data]="data" [textField]="'title'" [valueField]="'value'" (valueChange)="valueChange()">Petrol</kendo-dropdownlist>
-  </mcb-form-control>
-  <mcb-form-control [labelKey]="'bank-country-label'">
-    <mcb-file-upload required [(ngModel)]="file" (ngModelChange)="onChange()"></mcb-file-upload>
-  </mcb-form-control>
-</mcb-main-panel>
+  </ng-form-control>
+  <ng-form-control [labelKey]="'bank-country-label'">
+    <ng-file-upload required [(ngModel)]="file" (ngModelChange)="onChange()"></ng-file-upload>
+  </ng-form-control>
+</ng-main-panel>

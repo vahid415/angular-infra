@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation, AfterContentChecked, ChangeDetectorRef } 
 import { UIMessageBrokerService } from '../../../services/ui-message-broker.service';
 
 @Component({
-  selector: 'mcb-portal-layout',
+  selector: 'ng-portal-layout',
   templateUrl: './portal-layout.component.html',
   styleUrls: ['./portal-layout.component.css'],
   encapsulation: ViewEncapsulation.None

@@ -1,10 +1,10 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { ConfirmationDto, ConfirmMessage } from '../../../../services/types';
-import { McbConfirmationService } from '../../../../services/mcb-confirmation.service';
+import { ConfirmationService } from '../../../../services/confirmation.service';
 import { UIMessageBrokerService } from '../../../../services/ui-message-broker.service';
 
 @Component({
-  selector: 'mcb-confirmation-dialog',
+  selector: 'ng-confirmation-dialog',
   templateUrl: './confirmation-dialog.component.html'
 })
 export class PortalConfirmationDialogComponent {
@@ -15,7 +15,7 @@ export class PortalConfirmationDialogComponent {
   showDialog = false;
 
   constructor(
-    private confirmationService: McbConfirmationService,
+    private confirmationService: ConfirmationService,
     private uiMsgBroker: UIMessageBrokerService,
   ) {
     // Depricated

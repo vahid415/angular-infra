@@ -17,7 +17,7 @@ export class SubsystemManager {
     }
 
     // register(subsystem: Subsystem, externalRoutes?: SubsystemExternalRouteConfig);
-    // register(subsystem: Subsystem, usecasesRoutes?: McbRoutes);
+    // register(subsystem: Subsystem, usecasesRoutes?: NgRoutes);
     register(subsystem: Subsystem, routes?: SubsystemExternalRouteConfig) {
         this.validateSubsystem(subsystem);
         this.localizeSubsystem(subsystem);

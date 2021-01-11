@@ -6,9 +6,9 @@ import { align, collision } from './tooltip-utils';
 import { UIMessageBrokerService } from './../../../portal/ui/services/ui-message-broker.service';
 
 @Directive({
-  selector: '[mcbGridTooltip]'
+  selector: '[ngGridTooltip]'
 })
-export class McbGridTooltipDirective {
+export class NgGridTooltipDirective {
   dir: TooltipDirective;
   // @ViewChild(TooltipDirective) public tooltipDir: TooltipDirective;
   position = 'top';
@@ -20,7 +20,7 @@ export class McbGridTooltipDirective {
     private uiMsgBroker: UIMessageBrokerService,
     private popupService: PopupService) {
   }
-  @Input() set mcbGridTooltip(dir: TooltipDirective) {
+  @Input() set ngGridTooltip(dir: TooltipDirective) {
     this.dir = dir;
   }
 

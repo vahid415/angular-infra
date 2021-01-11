@@ -3,8 +3,8 @@ import { FormControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angula
 import { MobileValidatorFn } from './mobile-validator';
 
 @Directive({
-  selector: '[mcbMobileValidator]',
-  exportAs: 'mcbMobileValidator',
+  selector: '[ngMobileValidator]',
+  exportAs: 'ngMobileValidator',
   providers: [{
     provide: NG_VALIDATORS,
     useExisting: MobileValidatorDirective,

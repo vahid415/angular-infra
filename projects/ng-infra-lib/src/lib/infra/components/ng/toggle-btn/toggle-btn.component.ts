@@ -1,7 +1,7 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 
 @Component({
-  selector: 'mcb-toggle',
+  selector: 'ng-toggle',
   templateUrl: './toggle-btn.component.html'
 })
 export class ToggleBtnComponent implements OnChanges {

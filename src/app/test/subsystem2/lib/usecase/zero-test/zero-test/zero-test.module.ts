@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ZeroTestComponent } from './zero-test.component';
-import { InfrastructureModule, McbRouterModule } from '@app/ng-infra';
+import { InfrastructureModule, NgRouterModule } from '@app/ng-infra';
 
 
 
@@ -10,7 +10,7 @@ import { InfrastructureModule, McbRouterModule } from '@app/ng-infra';
   imports: [
     CommonModule,
     InfrastructureModule,
-    McbRouterModule.forChild([{
+    NgRouterModule.forChild([{
       path: '',
       component: ZeroTestComponent
     }])

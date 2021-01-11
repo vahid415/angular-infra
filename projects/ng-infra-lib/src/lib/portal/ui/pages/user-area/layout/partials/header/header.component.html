@@ -1,19 +1,18 @@
-<div class="mcb-brand">
+<div class="ng-brand">
   <div style="float: right; width: 45%;">
     <!-- <a style="margin-left: 10px; width: 32px;" class="toggle-bar"><i class="fa fa-stream"></i> </a> -->
     <img style="width: 32px;cursor: pointer;" src="assets/template/img/menu.svg" alt="menu"
          (click)="toggleSidebar()" />
-    <img style="width: 70px; cursor: pointer;" src="assets/template/img/profile.svg" alt="Maskan Bank"
+    <img style="width: 70px; cursor: pointer;" src="assets/template/img/sample.png" 
          (click)="goToHome()" />
   </div>
   <div class="text-center mt-2" style="float: left; width: 55%;">
-    <h6>{{'coreBanking' | translator}}</h6>
-    <p style="margin-bottom: 0;">{{'maskanBank' | translator}}</p>
+    <p style="margin-bottom: 0;">{{'appName' | translator}}</p>
   </div>
 </div>
-<div class="mcb-page-header {{showSidebarClass}}">
-  <mcb-portal-user-area-status></mcb-portal-user-area-status>
-  <mcb-portal-user-area-breadcrumb></mcb-portal-user-area-breadcrumb>
+<div class="ng-page-header {{showSidebarClass}}">
+  <ng-portal-user-area-status></ng-portal-user-area-status>
+  <ng-portal-user-area-breadcrumb></ng-portal-user-area-breadcrumb>
 </div>
 
 

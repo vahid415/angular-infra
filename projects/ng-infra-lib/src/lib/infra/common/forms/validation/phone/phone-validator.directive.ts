@@ -3,8 +3,8 @@ import {FormControl, NG_VALIDATORS, ValidationErrors, Validator} from '@angular/
 import {PhoneValidatorFn} from './phone-validator';
 
 @Directive({
-  selector: '[mcbPhoneValidator]',
-  exportAs: 'mcbPhoneValidator',
+  selector: '[ngPhoneValidator]',
+  exportAs: 'ngPhoneValidator',
   providers: [{
     provide: NG_VALIDATORS,
     useExisting: PhoneValidatorDirective,

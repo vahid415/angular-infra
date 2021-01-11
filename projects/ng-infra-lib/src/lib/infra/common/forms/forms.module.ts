@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormDirective } from './form.directive';
 import { AutoFocusDirective } from './utils/auto-focus.directive';
-import { McbNumberSeparatorPipe } from './utils/number-separator.pipe';
+import { NgNumberSeparatorPipe } from './utils/number-separator.pipe';
 import { ValidationModule } from './validation/validation.module';
 import { MaskModule } from './masks/mask.module';
 import { FormComponent } from './form.component';
@@ -11,7 +11,7 @@ const DECLARATIONS = [
   FormDirective,
   FormComponent,
   AutoFocusDirective,
-  McbNumberSeparatorPipe,
+  NgNumberSeparatorPipe,
 ];
 
 @NgModule({
@@ -27,5 +27,5 @@ const DECLARATIONS = [
     MaskModule
   ]
 })
-export class McbFormsModule {
+export class NgFormsModule {
 }

@@ -1,4 +1,4 @@
-.mcbInput {
+.ngInput {
   width: 100%;
   font-size: 14px;
   outline: 0;
@@ -9,11 +9,11 @@
   color: #656565;
 }
 
-.mcbDivInput {
+.ngDivInput {
   position: relative;
 }
 
-.mcbBtnInput {
+.ngBtnInput {
   outline: none;
   position: absolute;
   left: 4px;
@@ -31,14 +31,14 @@
   transition: all 0.3s;
 }
 
-.mcbBtnInput:hover {
+.ngBtnInput:hover {
   border-color: hsl(16 85% 85% / 1);
   color: hsl(16deg 88% 54%);
   background-color: hsl(16 88% 90% / 1);
   transition: all 0.3s;
 }
 
-.mcbDivResult {
+.ngDivResult {
   font-size: 12px;
   padding: 0 10px 0 0;
   background-color: hsl(119 53% 90% / 1);
@@ -51,13 +51,13 @@
   border-bottom-right-radius: 5px;
 }
 
-.mcbDivResult.invalid {
+.ngDivResult.invalid {
   background-color: hsl(3 74% 90% / 1);
   color: hsl(0 100% 55% / 1);
   border-color: hsl(3 73% 80% / 1);
 }
 
-.mcbSpanClear {
+.ngSpanClear {
   cursor: pointer;
   float: left;
   line-height: 24px;
@@ -69,42 +69,42 @@
   font-size: 12px;
 }
 
-.mcbSpanClear:hover {
+.ngSpanClear:hover {
   color: hsl(155 31% 50% / 1);
   transition: all 0.3s;
 }
 
-.mcbDivResult.invalid .mcbSpanClear {
+.ngDivResult.invalid .ngSpanClear {
   color: hsl(0 100% 70% / 1);
   transition: all 0.3s;
 }
 
-.mcbDivResult.invalid .mcbSpanClear:hover {
+.ngDivResult.invalid .ngSpanClear:hover {
   color: hsl(0 100% 50% / 1);
   transition: all 0.3s;
 }
 
-.mcbDivInput.disabled .mcbBtnInput {
+.ngDivInput.disabled .ngBtnInput {
   color: hsl(0 0% 75% / 1);
   background-color: hsl(0 0% 90% / 1);
 }
 
-.mcbDivInput.required .mcbInput {
+.ngDivInput.required .ngInput {
   border-right: 3px solid red;
 }
-.mcbDivInput.valid .mcbInput {
+.ngDivInput.valid .ngInput {
   border-right: 3px solid #79b99e;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.mcbDivInput.invalid .mcbInput.ng-touched {
+.ngDivInput.invalid .ngInput.ng-touched {
   border-color: hsl(6 100% 70% / 1);
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-.mcbDivInput.invalid .mcbInput:focus {
+.ngDivInput.invalid .ngInput:focus {
   box-shadow: 0 0 0 3px rgb(255 191 184);
   border-color: hsl(6 100% 70% / 1);
   -webkit-transition: all 0.3s;

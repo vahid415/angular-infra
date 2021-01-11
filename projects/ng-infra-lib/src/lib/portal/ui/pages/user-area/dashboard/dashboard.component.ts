@@ -8,12 +8,12 @@ import { NG_VALUE_ACCESSOR, NG_VALIDATORS } from '@angular/forms';
 import { NgbCalendar, NgbDatepickerI18n, NgbCalendarPersian } from '@ng-bootstrap/ng-bootstrap';
 import { UserIdentityService } from '../../../../security/authentication/user-identity.service';
 import { NgbDatepickerI18nPersian } from '../../../../../infra/common/localization/date/ngb-date-picker-i18n-persian';
-import { McbDate } from '../../../../../infra/common/localization/date/date';
+import { NgDate } from '../../../../../infra/common/localization/date/date';
 import { interval, Subscription } from 'rxjs';
 import { now } from 'moment-jalaali';
 
 @Component({
-    selector: 'mcb-dashboard',
+    selector: 'ng-dashboard',
     templateUrl: './dashboard.component.html',
     styleUrls: ['dashboard.component.css'],
     providers: [
@@ -25,7 +25,7 @@ export class DashboardComponent implements OnDestroy {
     @Breadcrumb() breadcrumb: BreadcrumbItem = { textKey: 'dashboard' };
     fullname: string;
     organizationTitle: string;
-    date: McbDate;
+    date: NgDate;
     dateSubscription: Subscription;
 
     constructor(
@@ -35,9 +35,9 @@ export class DashboardComponent implements OnDestroy {
         const user = userService.user;
         this.fullname = user.fullName;
         this.organizationTitle = user.activeOrganizationTitle;
-        this.date = McbDate.clientDate();
+        this.date = NgDate.clientDate();
         this.dateSubscription = interval(1000).subscribe(() => {
-            this.date = McbDate.clientDate();
+            this.date = NgDate.clientDate();
         });
     }
 

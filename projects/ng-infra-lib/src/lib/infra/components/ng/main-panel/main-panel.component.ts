@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'mcb-main-panel',
+  selector: 'ng-main-panel',
   templateUrl: './main-panel.component.html',
 })
 export class MainPanelComponent implements OnInit {
@@ -12,7 +12,7 @@ export class MainPanelComponent implements OnInit {
   ngOnInit() {
     // this.layoutService.onSideBarToggle.subscribe(showSidebar => {
     //   if (!showSidebar) {
-    //     this.showSidebarClass = 'mcb-sidebar-hide';
+    //     this.showSidebarClass = 'ng-sidebar-hide';
     //   } else {
     //     this.showSidebarClass = '';
     //   }

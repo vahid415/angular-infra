@@ -10,8 +10,8 @@ export interface ContextMenuItemSelectData {
 }
 
 @Component({
-    selector: 'mcb-treeview',
-    exportAs: 'mcbTreeview',
+    selector: 'ng-treeview',
+    exportAs: 'ngTreeview',
     templateUrl: './tree-view.component.html',
     styleUrls: ['./tree-view.component.css']
 })

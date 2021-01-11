@@ -1,12 +1,12 @@
-mcb-file-upload {
+ng-file-upload {
   display: block;
 }
 
-.mcb-file-upload-wrapper {
+.ng-file-upload-wrapper {
   position: relative;
 }
 
-.mcb-file-upload-wrapper input {
+.ng-file-upload-wrapper input {
   width: 100%;
 }
 
@@ -14,7 +14,7 @@ mcb-file-upload {
   cursor: pointer;
 }
 
-.mcb-open-dialog-btn {
+.ng-open-dialog-btn {
   height: 100%;
   width: 1em;
   background: transparent;
@@ -25,6 +25,6 @@ mcb-file-upload {
   position: absolute;
 }
 
-.mcb-open-dialog-btn:focus {
+.ng-open-dialog-btn:focus {
   outline: none;
 }

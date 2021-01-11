@@ -1,23 +1,23 @@
 import { Route, LoadChildren } from '@angular/router';
 import { Type } from '@angular/core';
 
-export interface McbRouteData {
+export interface NgRouteData {
     permission?: string | string[];
 }
 
-export interface McbRoute {
+export interface NgRoute {
     path?: string;
     component?: Type<any>;
-    children?: McbRoutes;
+    children?: NgRoutes;
     loadChildren?: LoadChildren;
-    data?: McbRouteData;
+    data?: NgRouteData;
     redirectTo?: string;
 }
 
-export declare type McbRoutes = McbRoute[];
+export declare type NgRoutes = NgRoute[];
 
 // export interface InfrastructureRoutings {
-//     dashboard: McbRoute;
-//     access: McbRoute;
+//     dashboard: NgRoute;
+//     access: NgRoute;
 // }
 

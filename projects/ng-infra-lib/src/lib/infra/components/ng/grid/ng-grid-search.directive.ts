@@ -1,9 +1,9 @@
 import {Directive, TemplateRef} from '@angular/core';
 
 @Directive({
-  selector: '[mcbGridSearch]', exportAs: 'mcbGridSearch'
+  selector: '[ngGridSearch]', exportAs: 'ngGridSearch'
 })
-export class MCBGridSearchDirective {
+export class NgGridSearchDirective {
 
   constructor(public template: TemplateRef<any>) {
   }

@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { McbRoutes, McbRouterModule } from '@app/ng-infra';
+import { NgRoutes, NgRouterModule } from '@app/ng-infra';
 import { Usecase1Feature1Component as Usecase1Feature1Component } from './feature1/feature1.component';
 
-const routes: McbRoutes = [
+const routes: NgRoutes = [
   {
     path: 'feature1',
     component: Usecase1Feature1Component,
@@ -13,7 +13,7 @@ const routes: McbRoutes = [
 ];
 
 @NgModule({
-  imports: [McbRouterModule.forChild(routes)]
+  imports: [NgRouterModule.forChild(routes)]
 })
 export class Usecase1RoutingModule {
 }

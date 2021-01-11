@@ -1,4 +1,4 @@
-export enum McbGridColumnAlign {
+export enum NgGridColumnAlign {
   LEFT = "left",
   RIGHT = "right",
   CENTER = "center"

@@ -27,7 +27,7 @@ export const CUSTOM_INPUT_CONTROL_VALIDATORS: any = {
 
 
 @Component({
-  selector: 'mcb-lookup-first-version',
+  selector: 'ng-lookup-first-version',
   templateUrl: './lookup.component.html',
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR, CUSTOM_INPUT_CONTROL_VALIDATORS]
 })

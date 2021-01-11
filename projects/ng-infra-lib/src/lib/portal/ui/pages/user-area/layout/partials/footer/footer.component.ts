@@ -4,7 +4,7 @@ import { UserAreaLayoutService } from '../../user-area-layout.service';
 import { UserIdentityService } from './../../../../../../security/authentication/user-identity.service';
 
 @Component({
-  selector: 'mcb-portal-user-area-footer',
+  selector: 'ng-portal-user-area-footer',
   templateUrl: './footer.component.html'
 })
 export class PortalUserAreaFooterComponent implements OnInit {
@@ -20,7 +20,7 @@ export class PortalUserAreaFooterComponent implements OnInit {
     this.organizationTitle = this.userIdentity.user.activeOrganizationTitle;
     this.layoutService.sideBarToggle.subscribe((showSidebar: any) => {
       if (!showSidebar) {
-        this.showSidebarClass = 'mcb-sidebar-hide';
+        this.showSidebarClass = 'ng-sidebar-hide';
       } else {
         this.showSidebarClass = '';
       }

@@ -2,7 +2,7 @@ import { Injectable, Inject } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanActivateChild, Router, NavigationEnd } from '@angular/router';
 
 import { UserIdentity } from '../types';
-import { McbRouteData } from '../../routing/types';
+import { NgRouteData } from '../../routing/types';
 import { UIService } from '../../ui/services/ui.service';
 import { LogService } from '../../../infra/common/utils/log.service';
 import { FormState } from '../../../infra/common/forms/state/form-state';
@@ -108,7 +108,7 @@ export class AuthorizationGuard implements CanActivate, CanActivateChild {
   private hasUserPermissionToViewPage(user: UserIdentity, route: ActivatedRouteSnapshot) {
     let currentState = route;
     do {
-      const data: McbRouteData = currentState.data;
+      const data: NgRouteData = currentState.data;
       const perm = data.permission;
       if (typeof perm === 'string' || Array.isArray(perm)) {
         if (!user.hasPermission(perm) && !this.fakeAuthentication) {

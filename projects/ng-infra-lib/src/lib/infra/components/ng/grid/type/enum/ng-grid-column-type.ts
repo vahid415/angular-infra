@@ -1,4 +1,4 @@
-export enum McbGridColumnType {
+export enum NgGridColumnType {
   NUMBER = "number",
   BOOLEAN = "boolean",
   STRING = "string",

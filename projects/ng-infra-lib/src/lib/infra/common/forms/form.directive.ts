@@ -4,8 +4,8 @@ import { Directive, HostListener, Output, EventEmitter, Input } from '@angular/c
 import { FormState } from './state/form-state';
 
 @Directive({
-  selector: 'form[mcbForm]',
-  exportAs: 'mcbForm',
+  selector: 'form[appForm]',
+  exportAs: 'appForm',
 })
 export class FormDirective {
   @Input() safeNavigation = true;

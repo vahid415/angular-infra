@@ -4,7 +4,7 @@ import { HttpOptions, ServiceHostToken, TemporaryHttpHeaderKeys } from './types'
 import { ToastService } from '../ui/services/toast.service';
 import { Injector } from '@angular/core';
 
-export class McbHttpClient {
+export class NgHttpClient {
     private http: HttpClient;
     private toast: ToastService;
 

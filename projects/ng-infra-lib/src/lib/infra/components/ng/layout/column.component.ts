@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'mcb-column',
+  selector: 'ng-column',
   template: '<ng-content></ng-content>',
   host: {
     '[class]': 'columnClass'

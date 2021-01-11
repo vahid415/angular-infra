@@ -1,17 +1,17 @@
-mcb-date-picker {
+ng-date-picker {
   display: block;
 }
 
 
-.mcb-date-picker-wrapper {
+.ng-date-picker-wrapper {
   position: relative;
 }
 
-.mcb-date-picker-wrapper input {
+.ng-date-picker-wrapper input {
   width: 100%;
 }
 
-.mcb-date-picker-toggle-btn {
+.ng-date-picker-toggle-btn {
   height: 100%;
   width: 1em;
   background: transparent;
@@ -22,11 +22,11 @@ mcb-date-picker {
   position: absolute;
 }
 
-.mcb-date-picker-toggle-btn:focus {
+.ng-date-picker-toggle-btn:focus {
   outline: none;
 }
 
-.mcb-date-picker-footer {
+.ng-date-picker-footer {
   text-align: center;
   padding: 5px;
 }

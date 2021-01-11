@@ -4,8 +4,8 @@ export * from './http';
 export * from './master-form-model';
 export * from './master-grid-options';
 export * from './master-grid-operation-option';
-export * from './mcb-grid-action-dto';
+export * from './ng-grid-action-dto';
 export * from './permissions';
 
-export * from './enum/mcb-grid-column-align';
-export * from './enum/mcb-grid-column-type';
+export * from './enum/ng-grid-column-align';
+export * from './enum/ng-grid-column-type';

@@ -7,7 +7,7 @@ import { ErrorMessageType } from './../../../../../../infra/common/types/error-m
 import { UIMessageBrokerService } from '../../../../services/ui-message-broker.service';
 import { TranslatorService } from './../../../../../../infra/common/localization/lang/translator.service';
 @Component({
-  selector: 'mcb-user-change-password',
+  selector: 'ng-user-change-password',
   templateUrl: './user-change-password.component.html',
   styleUrls: ['./user-change-password.component.css']
 })

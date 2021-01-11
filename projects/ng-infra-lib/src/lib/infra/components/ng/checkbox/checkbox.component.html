@@ -1,4 +1,4 @@
-<div *ngIf="indeterminate" class="mcbCheckBox">
+<div *ngIf="indeterminate" class="ngCheckBox">
   <input type="checkbox"
          [id]="name" [(disabled)]="disabled"
          [indeterminate]="milestone?.status === 'crossed'"
@@ -8,7 +8,7 @@
 </div>
 
 
-<div *ngIf="!indeterminate" class="mcbCheckBox">
+<div *ngIf="!indeterminate" class="ngCheckBox">
   <input type="checkbox" [id]="name" [(disabled)]="disabled" [(ngModel)]="_value"
          (change)="onInputChange($event)"  [checked]="checked" (blur)="onBlur()"/>
   <label [for]="name"></label>

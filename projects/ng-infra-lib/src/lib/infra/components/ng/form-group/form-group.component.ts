@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormGroupType } from './types';
 
 @Component({
-  selector: 'mcb-form-group',
+  selector: 'ng-form-group',
   templateUrl: './form-group.component.html'
 })
 export class FormGroupComponent {

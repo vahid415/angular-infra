@@ -4,18 +4,18 @@ import { RouterModule } from '@angular/router';
 import { PortalLayoutModule } from './ui/pages/common/layout/portal-layout.module';
 import { PortalHttpModule } from './http/http.module';
 import { SecurityModule } from './security/security.module';
-import { McbRouterModule } from './routing/router.module';
+import { NgRouterModule } from './routing/router.module';
 
 @NgModule({
   imports: [
     HttpClientModule,
     PortalHttpModule,
-    McbRouterModule,
+    NgRouterModule,
     PortalLayoutModule,
     SecurityModule
   ],
   exports: [
-    McbRouterModule,
+    NgRouterModule,
     SecurityModule
   ]
 })

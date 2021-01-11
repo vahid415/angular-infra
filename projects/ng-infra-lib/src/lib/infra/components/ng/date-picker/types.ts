@@ -1,6 +1,6 @@
-import { McbDate } from '../../../common/localization/date/date';
+import { NgDate } from '../../../common/localization/date/date';
 
-export interface McbDatePickerDateChangeEvent {
-    date: McbDate;
+export interface NgDatePickerDateChangeEvent {
+    date: NgDate;
 }
 

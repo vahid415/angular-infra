@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'mcb-loader',
+  selector: 'ng-loader',
   templateUrl: './loader.component.html'
 })
 export class PortalLoaderComponent {

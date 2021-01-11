@@ -19,7 +19,7 @@ import { PortalUserAreaSidebarComponent } from './partials/sidebar/sidebar.compo
 import { PortalUserAreaUserStatusComponent } from './partials/user-status/user-status.component';
 import { PortalUserAreaBreadcrumbComponent } from './partials/bread-crumb/breadcrumb.component';
 
-import { McbRouterModule } from '../../../../routing/router.module';
+import { NgRouterModule } from '../../../../routing/router.module';
 import { KendoComponentsModule } from '../../../../../infra/components/kendo/kendo.module';
 import { NgComponentsModule } from '../../../../../infra/components/ng/ng-components.module';
 import { CommonInfrastructureModule } from '../../../../../infra/common/common-infrastructure.module';
@@ -55,7 +55,7 @@ const NB_THEME_PROVIDERS = [
   ],
   imports: [
     ...NB_MODULES,
-    McbRouterModule,
+    NgRouterModule,
     PanelBarModule,
     CommonInfrastructureModule,
     KendoComponentsModule,

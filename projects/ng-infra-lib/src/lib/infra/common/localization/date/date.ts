@@ -2,7 +2,7 @@ import * as momentNS from 'moment-jalaali';
 
 const moment = momentNS;
 import {Observable} from 'rxjs';
-import {McbDateDescriptor, McbDateFormat, McbDateManipulationUnit, McbDateFormatOptions} from '../types';
+import {NgDateDescriptor, NgDateFormat, NgDateManipulationUnit, NgDateFormatOptions} from '../types';
 
 export const jalaaliMonths = [
   'فروردین',
@@ -19,7 +19,7 @@ export const jalaaliMonths = [
   'اسفند',
 ];
 
-export class McbDate {
+export class NgDate {
   private date: momentNS.Moment;
 
   private constructor(date: momentNS.Moment) {
@@ -38,36 +38,36 @@ export class McbDate {
     if (!includeTime) {
       m = this.resetTime(m);
     }
-    return new McbDate(m);
+    return new NgDate(m);
   }
 
   /**
    * Returns the current server date
    */
-  static serverDate(): Observable<McbDate> {
+  static serverDate(): Observable<NgDate> {
     throw new Error('not implemented.');
   }
 
   /**
-   * Creates a McbDate instance from the given Jalaali date
+   * Creates a NgDate instance from the given Jalaali date
    */
-  static fromJalaali(date: McbDateDescriptor) {
+  static fromJalaali(date: NgDateDescriptor) {
     const m = moment(`${date.year}-${date.month}-${date.day}`, 'jYYYY-jMM-jDD');
-    return new McbDate(m);
+    return new NgDate(m);
   }
 
   /**
-   * Creates a McbDate instance from the given Gregorian date
+   * Creates a NgDate instance from the given Gregorian date
    */
-  static fromGregorian(date: McbDateDescriptor): McbDate {
+  static fromGregorian(date: NgDateDescriptor): NgDate {
     const m = moment(`${date.year}-${date.month}-${date.day}`, 'YYYY-M-D');
-    return new McbDate(m);
+    return new NgDate(m);
   }
 
   /**
-   * Parse a string as a Jalaali date and returns its equivalent McbDate
+   * Parse a string as a Jalaali date and returns its equivalent NgDate
    */
-  static parseJalaali(date: string, format: McbDateFormat): McbDate {
+  static parseJalaali(date: string, format: NgDateFormat): NgDate {
     let momentFormat: string;
     switch (format) {
       case 'YYYY-MM-DD':
@@ -92,13 +92,13 @@ export class McbDate {
         throw new Error('unknown date format');
     }
 
-    return new McbDate(moment(date, momentFormat, true));
+    return new NgDate(moment(date, momentFormat, true));
   }
 
   /**
-   * Parse a string as a Gregorian date and returns its equivalent McbDate
+   * Parse a string as a Gregorian date and returns its equivalent NgDate
    */
-  static parseGregorian(date: string, format: McbDateFormat): McbDate {
+  static parseGregorian(date: string, format: NgDateFormat): NgDate {
     let momentFormat: string;
     switch (format) {
       case 'YYYY-M-D':
@@ -129,21 +129,21 @@ export class McbDate {
         throw new Error('unknown date format');
     }
 
-    return new McbDate(moment(date, momentFormat, false));
+    return new NgDate(moment(date, momentFormat, false));
   }
 
   /**
-   * Parse a string as a MCB Server date and returns its equivalent McbDate
+   * Parse a string as a Ng Server date and returns its equivalent NgDate
    */
-  static parseServer(date: string): McbDate {
-    return McbDate.parseGregorian(date, 'YYYY-MM-DD');
+  static parseServer(date: string): NgDate {
+    return NgDate.parseGregorian(date, 'YYYY-MM-DD');
   }
 
   /**
    * Creates an invalid date
    */
-  static invalid(): McbDate {
-    return new McbDate(moment.invalid());
+  static invalid(): NgDate {
+    return new NgDate(moment.invalid());
   }
 
   /**
@@ -155,51 +155,51 @@ export class McbDate {
   }
 
   /**
-   * Adds a specefic amount of time to the current McbDate
+   * Adds a specefic amount of time to the current NgDate
    */
-  add(amount: number, unit: McbDateManipulationUnit): McbDate {
+  add(amount: number, unit: NgDateManipulationUnit): NgDate {
     this.date.add(amount, unit);
     return this;
   }
 
   /**
-   * Subtracts a specefic amount of time from the current McbDate
+   * Subtracts a specefic amount of time from the current NgDate
    */
-  subtract(amount: number, unit: McbDateManipulationUnit) {
+  subtract(amount: number, unit: NgDateManipulationUnit) {
     this.date.subtract(amount, unit);
     return this;
   }
 
   /**
-   * Checks if this McbDate is before another McbDate
+   * Checks if this NgDate is before another NgDate
    */
-  isBefore(date: McbDate): boolean {
+  isBefore(date: NgDate): boolean {
     return this.date.isBefore(date.date, 'second');
   }
 
   /**
-   * Checks if this McbDate is after another McbDate
+   * Checks if this NgDate is after another NgDate
    */
-  isAfter(date: McbDate): boolean {
+  isAfter(date: NgDate): boolean {
     return this.date.isAfter(date.date, 'second');
   }
 
   /**
-   * Checks if this McbDate is same or after another McbDate
+   * Checks if this NgDate is same or after another NgDate
    */
-  isSameOrAfter(date: McbDate): boolean {
+  isSameOrAfter(date: NgDate): boolean {
     return this.date.isSameOrAfter(date.date, 'second');
   }
 
   /**
-   * Checks if this McbDate is before another McbDate
+   * Checks if this NgDate is before another NgDate
    */
-  isSameOrBefore(date: McbDate): boolean {
+  isSameOrBefore(date: NgDate): boolean {
     return this.date.isSameOrBefore(date.date, 'second');
   }
 
   /**
-   * Returns Jalaali date equivalent to this McbDate instance
+   * Returns Jalaali date equivalent to this NgDate instance
    */
   toJalaali(): any {
     return {
@@ -215,9 +215,9 @@ export class McbDate {
   }
 
   /**
-   * Returns Gregorian date equivalent to this McbDate instance
+   * Returns Gregorian date equivalent to this NgDate instance
    */
-  toGregorian(): McbDateDescriptor {
+  toGregorian(): NgDateDescriptor {
     return {
       year: this.date.year(),
       month: this.date.month() + 1,
@@ -229,9 +229,9 @@ export class McbDate {
   }
 
   /**
-   * Converts this McbDate instance to a Jalaali date string
+   * Converts this NgDate instance to a Jalaali date string
    */
-  formatJalaali(format: McbDateFormat = 'YYYY/MM/DD', options?: McbDateFormatOptions): string {
+  formatJalaali(format: NgDateFormat = 'YYYY/MM/DD', options?: NgDateFormatOptions): string {
     let mFormat: string;
     switch (format) {
       case 'YYYY-MM-DD':
@@ -266,9 +266,9 @@ export class McbDate {
   }
 
   /**
-   * Converts this McbDate instance to a Gregorian date string
+   * Converts this NgDate instance to a Gregorian date string
    */
-  formatGregorian(format: McbDateFormat = 'YYYY/MM/DD', options?: McbDateFormatOptions): string {
+  formatGregorian(format: NgDateFormat = 'YYYY/MM/DD', options?: NgDateFormatOptions): string {
     let mFormat: string;
     switch (format) {
       case 'YYYY-MM-DD':
@@ -303,7 +303,7 @@ export class McbDate {
   }
 
   /**
-   * Converts this McbDate instance to a MCB server recognizable date string
+   * Converts this NgDate instance to a Ng server recognizable date string
    */
   formatServer(): string {
     return this.formatGregorian('YYYY-MM-DD');

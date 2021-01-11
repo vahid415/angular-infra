@@ -3,9 +3,9 @@ import { NgModule } from '@angular/core';
 import { InputModule } from './input/input.module';
 import { LayoutModule } from './layout/layout.module';
 import { LookupModule } from './lookup/lookup.module';
-import { McbGridModule } from './grid/mcb-grid.module';
+import { NgGridModule } from './grid/ng-grid.module';
 import { Lookup2Module } from './lookup2/lookup2.module';
-import { McbWindowModule } from './window/window.module';
+import { NgWindowModule } from './window/window.module';
 import { CheckboxModule } from './checkbox/checkbox.module';
 import { TreeViewModule } from './tree-view/tree-view.module';
 import { MainPanelModule } from './main-panel/main-panel.module';
@@ -26,10 +26,10 @@ import { PersianInputModule } from './persian-input/persian-input.module';
     LayoutModule,
     LookupModule,
     Lookup2Module,
-    McbGridModule,
+    NgGridModule,
     TreeViewModule,
     CheckboxModule,
-    McbWindowModule,
+    NgWindowModule,
     MainPanelModule,
     ToggleBtnModule,
     FormGroupModule,

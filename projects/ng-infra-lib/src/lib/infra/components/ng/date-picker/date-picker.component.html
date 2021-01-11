@@ -1,7 +1,7 @@
-<div class="mcb-date-picker-wrapper">
+<div class="ng-date-picker-wrapper">
     <input #inputRef class="k-textbox" [disabled]="disabled" [(ngModel)]="_text" (input)="_onInput($event)"
         (blur)="_onBlur($event)" maxlength="10" (focus)="_onInputFocus()" />
-    <button type="button" (click)="_onToggleBtnClick($event)" class="mcb-date-picker-toggle-btn" [disabled]="disabled">
+    <button type="button" (click)="_onToggleBtnClick($event)" class="ng-date-picker-toggle-btn" [disabled]="disabled">
         <span class="k-icon k-i-calendar text-muted"></span>
     </button>
 </div>
@@ -11,7 +11,7 @@
         [minDate]="_min()" [maxDate]="_max()" [(ngModel)]="_datePickerValue">
     </ngb-datepicker>
     <ng-template #footerTemplate>
-        <div class="mcb-date-picker-footer">
+        <div class="ng-date-picker-footer">
             <button type="button" kendoButton (click)="_onTodayClick()">امروز</button>
         </div>
     </ng-template>

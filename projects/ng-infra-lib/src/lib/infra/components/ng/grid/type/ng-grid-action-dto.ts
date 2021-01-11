@@ -1,5 +1,5 @@
 
-export class McbGridAction {
+export class NgGridAction {
   type?: string;
   text: string;
   inlineText?: boolean;

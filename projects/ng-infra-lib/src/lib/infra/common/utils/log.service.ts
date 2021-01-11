@@ -5,8 +5,8 @@ import {Injectable} from '@angular/core';
 })
 export class LogService {
   public write(message?: any, ...optionalParams: any[]) {
-    console.log('----------- MCB LOG -----------');
+    console.log('----------- NG LOG -----------');
     console.log(message, optionalParams);
-    console.log('-------- END OF MCB LOG -------');
+    console.log('-------- END OF NG LOG -------');
   }
 }

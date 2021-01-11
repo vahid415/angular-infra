@@ -3,8 +3,8 @@ import { Directive, TemplateRef, ViewContainerRef, Input, Inject } from '@angula
 import { UserIdentityService } from '../authentication/user-identity.service';
 import { EnvironmentDescriptor, Environment } from '../../../infra/common/types/environment';
 @Directive({
-  selector: '[mcbPermission]',
-  exportAs: 'mcbPermission',
+  selector: '[ngPermission]',
+  exportAs: 'ngPermission',
 })
 export class PermissionDirective {
   private viewCreated: boolean;
@@ -18,7 +18,7 @@ export class PermissionDirective {
       this.fakeAuthentication = env.useFakeAuthenticationProvider;
   }
 
-  @Input() set mcbPermission(permission: string | string[]) {
+  @Input() set ngPermission(permission: string | string[]) {
     const granted = this.userIdentityService.user.hasPermission(permission);
     // const fake = this.subsystem.environment ? this.subsystem.environment.useFakeAuthenticationProvider : true;
     if (!this.fakeAuthentication) {

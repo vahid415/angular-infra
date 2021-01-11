@@ -5,7 +5,7 @@ import { NavigationService } from '../../../services/navigation.service';
 import { observable, Observable } from 'rxjs';
 
 @Component({
-    selector: 'mcb-login-area-layout',
+    selector: 'ng-login-area-layout',
     templateUrl: './login-layout.component.html',
     styleUrls: ['./login-layout.component.css'],
 })

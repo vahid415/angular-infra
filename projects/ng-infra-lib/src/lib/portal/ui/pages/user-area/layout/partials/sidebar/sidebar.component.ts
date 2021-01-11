@@ -8,10 +8,10 @@ import { Environment, EnvironmentDescriptor } from '../../../../../../../infra/c
 import { NbMenuService, NbThemeService, NbSidebarService, NbMediaBreakpointsService, NbMenuItem } from '@nebular/theme';
 
 @Component({
-  selector: 'mcb-portal-user-area-sidebar',
+  selector: 'ng-portal-user-area-sidebar',
   templateUrl: 'sidebar.component.html',
   styles: [`
-  .mcb-side-search-hide{
+  .ng-side-search-hide{
     position: absolute;
     left: 35px;
     top: 34px;
@@ -62,7 +62,7 @@ export class PortalUserAreaSidebarComponent implements OnInit {
   ngOnInit() {
     // this.layoutService.sideBarToggle.subscribe(showSidebar => {
     //   if (!showSidebar) {
-    //     this.showSidebarClass = 'mcb-sidebar-hide';
+    //     this.showSidebarClass = 'ng-sidebar-hide';
     //   } else {
     //     this.showSidebarClass = '';
     //   }
@@ -71,7 +71,7 @@ export class PortalUserAreaSidebarComponent implements OnInit {
 
     // this.layoutService.headerBarToggle.subscribe(openSideBar => {
     //   if (openSideBar) {
-    //     this.showSidebarOnResponsiveClass = 'mcb-sidebar-open';
+    //     this.showSidebarOnResponsiveClass = 'ng-sidebar-open';
     //   } else {
     //     this.showSidebarOnResponsiveClass = '';
     //   }

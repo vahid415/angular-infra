@@ -1,7 +1,7 @@
 import { Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, Renderer2 } from '@angular/core';
 
 @Directive({
-  selector: '[mcbPersianInput]', exportAs: 'mcbPersianInput',
+  selector: '[ngPersianInput]', exportAs: 'ngPersianInput',
 })
 export class PersianInputDirective implements OnInit {
 

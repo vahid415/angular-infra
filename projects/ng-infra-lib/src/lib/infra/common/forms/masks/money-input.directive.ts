@@ -10,7 +10,7 @@ import {
 import { PersianNumber } from './persian-number';
 
 @Directive({
-  selector: '[mcbMoneyInput]'
+  selector: '[ngMoneyInput]'
 })
 export class MoneyInputDirective  {
 

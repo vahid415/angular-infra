@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { McbDate, PrinterService, PrinterDocument, PrinterDocumentItem, Breadcrumb, BreadcrumbItem } from '@app/ng-infra';
+import { NgDate, PrinterService, PrinterDocument, PrinterDocumentItem, Breadcrumb, BreadcrumbItem } from '@app/ng-infra';
 
 @Component({
   selector: 'app-printer-test',
@@ -7,7 +7,7 @@ import { McbDate, PrinterService, PrinterDocument, PrinterDocumentItem, Breadcru
 })
 export class PrinterTestComponent {
   /*  primacyDto: PrimacyDto = {} as any; */
-  currentDate = McbDate.clientDate();
+  currentDate = NgDate.clientDate();
   cvv2: string;
   expireDate: string;
   cardNo: string;

@@ -1,31 +1,31 @@
 import { MasterFormColumn } from './type/master-form-model';
 import { Component, ContentChild, EventEmitter, Input, OnInit, Output, ViewChild } from '@angular/core';
-import { McbGridAction } from './type/mcb-grid-action-dto';
-import { MCBGridSearchDirective } from './mcb-grid-search.directive';
+import { NgGridAction } from './type/ng-grid-action-dto';
+import { NgGridSearchDirective } from './ng-grid-search.directive';
 import { RTL } from '@progress/kendo-angular-l10n';
 import { TooltipDirective } from '@progress/kendo-angular-tooltip';
 import { SortDescriptor } from '@progress/kendo-data-query';
 import { PagerSettings } from '@progress/kendo-angular-grid';
-import { McbConfirmationService } from '../../../../portal/ui/services/mcb-confirmation.service';
+import { ConfirmationService } from '../../../../portal/ui/services/confirmation.service';
 import { TranslatorService } from '../../../common/localization/lang/translator.service';
-import { McbGridSort } from '../../../common/types/sort.dto';
+import { NgGridSort } from '../../../common/types/sort.dto';
 import { PagingRequest } from '../../../common/types/paging-request.dto';
 
 export type RowActionParamFn = (dataItem: any) => boolean;
 export type RowActionFn = () => boolean;
 
 @Component({
-  selector: 'mcb-grid',
-  templateUrl: './mcb-grid.component.html',
+  selector: 'ng-grid',
+  templateUrl: './ng-grid.component.html',
   providers: [
     { provide: RTL, useValue: false }
   ]
 })
-export class McbGridComponent implements OnInit {
+export class NgGridComponent implements OnInit {
 
   showSearchPanel = false;
 
-  @ContentChild(MCBGridSearchDirective) mcbGridSearch: MCBGridSearchDirective;
+  @ContentChild('NgGridSearchDirective') ngGridSearch: NgGridSearchDirective;
   @ViewChild(TooltipDirective, { static: true }) public tooltipDir: TooltipDirective;
 
   @Input() data: Array<any> = [];
@@ -41,19 +41,19 @@ export class McbGridComponent implements OnInit {
   @Input() defaultColumnSortDir = 'asc';
 
   @Input() columns: MasterFormColumn[] = [];
-  @Input() actions: McbGridAction[] = [];
+  @Input() actions: NgGridAction[] = [];
   lockedActions = true;
   @Input() rowNumColumnWidth = 50;
   @Input() multipleSort = true;
 
   @Input() showActionColumn = true;
-  menuActions: McbGridAction[] = [];
-  buttonActions: McbGridAction[] = [];
-  toolbarActions: McbGridAction[] = [];
+  menuActions: NgGridAction[] = [];
+  buttonActions: NgGridAction[] = [];
+  toolbarActions: NgGridAction[] = [];
   _searchData: any[] = [];
 
-  mainColumns: McbGridSort[] = [];
-  groupColumns: McbGridSort[] = [];
+  mainColumns: NgGridSort[] = [];
+  groupColumns: NgGridSort[] = [];
 
   @Input() visibleNewAction = true;
   @Input() visibleRefreshAction = true;
@@ -97,7 +97,7 @@ export class McbGridComponent implements OnInit {
     buttonCount: 5, info: true, type: 'numeric', pageSizes: [5, 10, 15, 20], previousNext: true
   };
 
-  constructor(private confirmationService: McbConfirmationService, private translator: TranslatorService) {
+  constructor(private confirmationService: ConfirmationService, private translator: TranslatorService) {
 
   }
 
@@ -116,7 +116,7 @@ export class McbGridComponent implements OnInit {
     if (this.loadData) {
       this.gridResult.start = this.skip;
       this.gridResult.size = this.pageSize;
-      this.gridResult.sort = new McbGridSort();
+      this.gridResult.sort = new NgGridSort();
       this.gridResult.filters = [];
       this.gridChange.emit(this.gridResult);
       this.showActionColumn = true;
@@ -163,7 +163,7 @@ export class McbGridComponent implements OnInit {
   }
 
   private initializeActions() {
-    // this.actions.unshift(new McbGridAction('button', this._actionDeleteButtonTitle, false, 'fa fa-trash-alt red', (dataItem) => {
+    // this.actions.unshift(new NgGridAction('button', this._actionDeleteButtonTitle, false, 'fa fa-trash-alt red', (dataItem) => {
     //   this.confirmationService.confirm({
     //     message: this.deleteActionConfirmMessage, title: this.deleteActionConfirmTitle, accept: () => {
     //       this.delete.emit(dataItem);
@@ -172,10 +172,10 @@ export class McbGridComponent implements OnInit {
     //     }
     //   });
     // }, this.disableDeleteAction, this.visibleDeleteAction));
-    // this.actions.unshift(new McbGridAction('button', this._actionShowButtonTitle, false, 'fa fa-eye orange', (dataItem) => {
+    // this.actions.unshift(new NgGridAction('button', this._actionShowButtonTitle, false, 'fa fa-eye orange', (dataItem) => {
     //   this.show.emit(dataItem);
     // }, this.disableShowAction, this.visibleShowAction));
-    // this.actions.unshift(new McbGridAction('button', this._actionEditButtonTitle, false, 'fa fa-edit green', (dataItem) => {
+    // this.actions.unshift(new NgGridAction('button', this._actionEditButtonTitle, false, 'fa fa-edit green', (dataItem) => {
     //   this.edit.emit(dataItem);
     // }, this.disableEditAction, this.visibleEditAction));
   }
@@ -216,8 +216,8 @@ export class McbGridComponent implements OnInit {
     this.gridChange.emit(this.gridResult);
   }
 
-  handleOrders(sort: SortDescriptor): McbGridSort {
-    const result: McbGridSort = new McbGridSort();
+  handleOrders(sort: SortDescriptor): NgGridSort {
+    const result: NgGridSort = new NgGridSort();
     result.fieldName = sort.field;
     result.operation = sort.dir;
     return result;
@@ -239,7 +239,7 @@ export class McbGridComponent implements OnInit {
       this.sortSetting = [];
       this.gridResult.start = this.skip;
       this.gridResult.size = this.pageSize;
-      this.gridResult.sort = new McbGridSort();
+      this.gridResult.sort = new NgGridSort();
       this.gridResult.filters = [];
       this.gridChange.emit(this.gridResult);
       this.refresh.emit();

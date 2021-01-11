@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UIMessageBrokerService } from '../../../../services/ui-message-broker.service';
 
 @Component({
-  selector: 'mcb-tooltip',
+  selector: 'ng-tooltip',
   templateUrl: './tooltip.component.html',
   styles: [`.test {
   }`]

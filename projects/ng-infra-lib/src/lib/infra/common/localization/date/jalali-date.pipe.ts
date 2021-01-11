@@ -1,8 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { McbDate } from './date';
+import { NgDate } from './date';
 
-@Pipe({ name: 'mcbJalaliDate' })
-export class McbJalaliDatePipe implements PipeTransform {
+@Pipe({ name: 'ngJalaliDate' })
+export class NgJalaliDatePipe implements PipeTransform {
     constructor() { }
 
     transform(value: string): string {
@@ -11,7 +11,7 @@ export class McbJalaliDatePipe implements PipeTransform {
         }
 
         try {
-            return McbDate.parseGregorian(value,"YYYY/MM/DD").formatJalaali('YYYY/MM/DD');
+            return NgDate.parseGregorian(value,"YYYY/MM/DD").formatJalaali('YYYY/MM/DD');
         } catch {
             return 'invalid-date';
         }

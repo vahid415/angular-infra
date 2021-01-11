@@ -1,5 +1,5 @@
 import { RouterModule, Route, Routes } from '@angular/router';
-import { McbRoutes } from './types';
+import { NgRoutes } from './types';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { RouterOutletDirective } from './router-outlet.directive';
 // import { FormDeactivationGuard } from '../forms/form-deactivation-guard';
@@ -12,12 +12,12 @@ import { RouterOutletDirective } from './router-outlet.directive';
         RouterOutletDirective
     ]
 })
-export class McbRouterModule {
-    // static forRoot(routes: McbRoutes) {
+export class NgRouterModule {
+    // static forRoot(routes: NgRoutes) {
     //     return RouterModule.forRoot(routes);
     // }
 
-    static forChild(routes: McbRoutes): ModuleWithProviders<RouterModule> {
+    static forChild(routes: NgRoutes): ModuleWithProviders<RouterModule> {
         return RouterModule.forChild(routes);
     }
 
@@ -31,12 +31,12 @@ export class McbRouterModule {
         ]);
     }
 
-    static forSubsystem(routes: McbRoutes) {
+    static forSubsystem(routes: NgRoutes) {
         // this.attachFormDeactivationGaurdToRoutes(routes);
         return RouterModule.forChild(routes);
     }
 
-    // private static attachFormDeactivationGaurdToRoutes(routes: McbRoutes) {
+    // private static attachFormDeactivationGaurdToRoutes(routes: NgRoutes) {
     //     routes
     //         .forEach(r => {
     //             if (r.component) {

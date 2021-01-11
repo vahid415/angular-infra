@@ -2,7 +2,7 @@ import {Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Output
 
 
 @Directive({
-  selector: '[mcbEnglishInput]', exportAs: 'mcbEnglishInput',
+  selector: '[ngEnglishInput]', exportAs: 'ngEnglishInput',
 })
 export class EnglishInputDirective implements OnInit {
 

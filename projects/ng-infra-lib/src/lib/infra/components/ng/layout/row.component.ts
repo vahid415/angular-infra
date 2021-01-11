@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'mcb-row',
+  selector: 'ng-row',
   template: '<ng-content></ng-content>',
   host: {
     '[class]': '"row"'

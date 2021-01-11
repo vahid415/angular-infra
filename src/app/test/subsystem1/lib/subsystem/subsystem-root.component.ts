@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Breadcrumb, BreadcrumbItem, TranslatorService } from '@app/ng-infra';
 
 @Component({
-    selector: 'mcb-subsystem1',
+    selector: 'ng-subsystem1',
     templateUrl: './subsystem-root.component.html',
 })
 export class SubsystemRootComponent {

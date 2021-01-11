@@ -4,7 +4,7 @@ import {InputComponent} from './input.component';
 import {FormsModule} from '@angular/forms';
 import {InputService} from './input.service';
 import {LocalizationModule} from '../../../common/localization/localization.module';
-import {McbWindowModule} from "../window/window.module";
+import {NgWindowModule} from "../window/window.module";
 import {WindowModule} from "@progress/kendo-angular-dialog";
 
 @NgModule({
@@ -13,7 +13,7 @@ import {WindowModule} from "@progress/kendo-angular-dialog";
         CommonModule,
         FormsModule,
         LocalizationModule,
-        McbWindowModule,
+        NgWindowModule,
         WindowModule
     ],
   exports: [InputComponent],

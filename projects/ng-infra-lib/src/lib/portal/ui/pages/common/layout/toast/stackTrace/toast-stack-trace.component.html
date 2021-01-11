@@ -1,4 +1,4 @@
-<kendo-panelbar class="mcb-toast-item-panelBar">
+<kendo-panelbar class="ng-toast-item-panelBar">
   <kendo-panelbar-item [expanded]="true" [title]="null">
     <ng-template kendoPanelBarItemTitle>
       <span style="text-align: left;" class="item-title">Exception Details</span>
@@ -14,7 +14,7 @@
     </ng-template>
   </kendo-panelbar-item>
 </kendo-panelbar>'
-<kendo-panelbar class="mcb-toast-item-panelBar" *ngFor="let item of data.stackTrace">
+<kendo-panelbar class="ng-toast-item-panelBar" *ngFor="let item of data.stackTrace">
   <kendo-panelbar-item [title]="null">
     <ng-template kendoPanelBarItemTitle>
       <span style="text-align: left;" class="item-title">{{item.fileName}}</span>

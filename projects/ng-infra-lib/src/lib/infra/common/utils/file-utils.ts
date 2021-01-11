@@ -1,4 +1,4 @@
-export class McbFileUtils {
+export class NgFileUtils {
   static SaveBlob(blob: Blob, fileName: string) {
     const url = window.URL.createObjectURL(blob);
     const a = document.createElement('a');

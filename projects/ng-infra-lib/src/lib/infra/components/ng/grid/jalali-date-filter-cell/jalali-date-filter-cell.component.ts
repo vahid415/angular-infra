@@ -1,22 +1,22 @@
 import { Component, Input } from '@angular/core';
 import { FilterService, BaseFilterCellComponent, ColumnComponent } from '@progress/kendo-angular-grid';
 
-import { McbDatePickerDateChangeEvent } from '../../date-picker/types';
+import { NgDatePickerDateChangeEvent } from '../../date-picker/types';
 
 @Component({
-  selector: 'mcb-grid-jalali-date-filter-cell',
-  exportAs: 'mcbGridJalaliDateFilterCell',
+  selector: 'ng-grid-jalali-date-filter-cell',
+  exportAs: 'ngGridJalaliDateFilterCell',
   templateUrl: './jalali-date-filter-cell.component.html',
   styles: [':host: { width: 100%; display: inline-block }']
 })
-export class McbGridJalaliDateFilterCellComponent extends BaseFilterCellComponent {
+export class NgGridJalaliDateFilterCellComponent extends BaseFilterCellComponent {
   @Input() public column: ColumnComponent;
 
   constructor(public filterService: FilterService) {
     super(filterService);
   }
 
-  _onDateChange(e: McbDatePickerDateChangeEvent) {
+  _onDateChange(e: NgDatePickerDateChangeEvent) {
     this.applyFilter(
       !e.date ?
         this.removeFilter(this.column.field) :

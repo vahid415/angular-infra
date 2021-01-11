@@ -3,13 +3,13 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { WindowRef, WindowService, WindowCloseResult } from '@progress/kendo-angular-dialog';
 
 @Component({
-  selector: 'mcb-window',
-  templateUrl: './mcb-window.component.html',
+  selector: 'ng-window',
+  templateUrl: './ng-window.component.html',
   providers: [
-    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => McbWindowComponent), multi: true }
+    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => NgWindowComponent), multi: true }
   ]
 })
-export class McbWindowComponent implements OnInit, ControlValueAccessor {
+export class NgWindowComponent implements OnInit, ControlValueAccessor {
   _show = true;
   @Input() autoFocusedElement: string;
   @Input() title: string;

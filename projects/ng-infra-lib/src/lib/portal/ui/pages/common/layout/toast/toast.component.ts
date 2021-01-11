@@ -5,7 +5,7 @@ import { StackTraceExceptionDto, ToastData, ToastType } from '../../../../servic
 import { ToastService } from '../../../../services/toast.service';
 
 @Component({
-  selector: 'mcb-toast',
+  selector: 'ng-toast',
   templateUrl: './toast.component.html',
   animations: [trigger('fadeInOut', [state('void', style({
     opacity: 0
@@ -53,14 +53,14 @@ export class PortalToastComponent implements OnInit {
         switch (item.type) {
           case ToastType.INFO: {
             this.showInfo = true;
-            item.toastStyle = 'mcb-toast-info';
+            item.toastStyle = 'ng-toast-info';
             if (item.timer == null || item.timer == undefined) {
               item.timer = this.DEFAULT_TIMER;
             }
           }
             break;
           case ToastType.ERROR: {
-            item.toastStyle = 'mcb-toast-error';
+            item.toastStyle = 'ng-toast-error';
             item.showError = true;
             if (item.stackTrace) {
               item.showStackError = true;
@@ -77,7 +77,7 @@ export class PortalToastComponent implements OnInit {
             break;
           case ToastType.SUCCESS: {
             this.showSuccess = true;
-            item.toastStyle = 'mcb-toast-success';
+            item.toastStyle = 'ng-toast-success';
 
             if (item.timer == null || item.timer == undefined) {
               item.timer = this.DEFAULT_TIMER;
@@ -86,18 +86,18 @@ export class PortalToastComponent implements OnInit {
             break;
           case ToastType.WARNING: {
             this.showWarning = true;
-            item.toastStyle = 'mcb-toast-warning';
+            item.toastStyle = 'ng-toast-warning';
             // item.timer = this.DEFAULT_TIMER;
           }
             break;
           case ToastType.VALIDATIONS: {
             // this.showError = true;
-            item.toastStyle = 'mcb-toast-validation';
+            item.toastStyle = 'ng-toast-validation';
           }
             break;
           default: {
             this.showInfo = true;
-            item.toastStyle = 'mcb-toast-info';
+            item.toastStyle = 'ng-toast-info';
           }
         }
       });

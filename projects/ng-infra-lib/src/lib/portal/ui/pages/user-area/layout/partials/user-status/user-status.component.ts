@@ -16,7 +16,7 @@ import { Environment, EnvironmentDescriptor } from '../../../../../../../infra/c
 
 
 @Component({
-  selector: 'mcb-portal-user-area-status',
+  selector: 'ng-portal-user-area-status',
   templateUrl: './user-status.component.html',
   styles: [
 
@@ -119,7 +119,7 @@ export class PortalUserAreaUserStatusComponent implements OnInit, OnDestroy {
   // private existingForDocumentClick(className) {
   //   let result = false;
   //   const listOfClass: string[] =
-  //     ['mcb-user-status', 'mcb-user-avatar', 'mcb-user-title', 'mcb-user-panel', 'mcb-user-panel-header', 'mcb-user-panel-menu'];
+  //     ['ng-user-status', 'ng-user-avatar', 'ng-user-title', 'ng-user-panel', 'ng-user-panel-header', 'ng-user-panel-menu'];
   //   listOfClass.forEach(l => {
   //     if (l === className) {
   //       result = true;

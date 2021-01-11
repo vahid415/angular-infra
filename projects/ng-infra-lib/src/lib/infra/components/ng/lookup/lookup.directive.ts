@@ -1,7 +1,7 @@
 import { Directive, Input, OnInit, ViewChild } from '@angular/core';
 
 @Directive({
-  selector: '[mcbLookup]', exportAs: 'mcbLookup',
+  selector: '[ngLookup]', exportAs: 'ngLookup',
 })
 export class LookupDirective implements OnInit {
 

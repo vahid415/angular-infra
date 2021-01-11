@@ -1,4 +1,4 @@
-<div [class]="'mcb-grid-cell-content ' + _alignStyle">
+<div [class]="'ng-grid-cell-content ' + _alignStyle">
   <span class="grid-cell" *ngIf="isNumber(type)">
     {{resolveObject(field , cell)}}
   </span>
@@ -9,10 +9,10 @@
     {{resolveObject(field , cell)}}
   </span>
   <span class="grid-cell" *ngIf="isJalaliDate(type)">
-    {{resolveObject(field , cell) | mcbJalaliDate}}
+    {{resolveObject(field , cell) | ngJalaliDate}}
   </span>
   <span class="grid-cell" *ngIf="isMoney(type)">
-    {{resolveObject(field , cell) | mcbNumberSeparator}}
+    {{resolveObject(field , cell) | ngNumberSeparator}}
   </span>
   <span class="grid-cell" *ngIf="isString(type)">
     {{resolveObject(field , cell)}}

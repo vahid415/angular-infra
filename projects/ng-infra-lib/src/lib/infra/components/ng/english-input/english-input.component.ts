@@ -4,7 +4,7 @@ import { TooltipDirective } from '@progress/kendo-angular-tooltip';
 import { EnglishInputDirective } from '../../../common/forms/masks/english-input.directive';
 
 @Component({
-  selector: 'mcb-english-input',
+  selector: 'ng-english-input',
   templateUrl: './english-input.component.html',
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => EnglishInputComponent), multi: true }

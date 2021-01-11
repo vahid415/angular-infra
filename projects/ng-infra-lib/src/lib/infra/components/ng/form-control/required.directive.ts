@@ -4,7 +4,7 @@ import { Directive, ElementRef, EventEmitter, HostListener, Input, OnInit, Outpu
 @Directive({
     // tslint:disable-next-line: directive-selector
     selector: '[required]',
-    exportAs: 'mcbRequired',
+    exportAs: 'ngRequired',
 })
 export class RequiredFieldDirective {
     @Input('required') value: any;

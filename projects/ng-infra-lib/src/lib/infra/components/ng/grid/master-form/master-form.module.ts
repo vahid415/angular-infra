@@ -6,7 +6,7 @@ import { TooltipModule } from '@progress/kendo-angular-tooltip';
 import { PanelBarModule, LayoutModule } from '@progress/kendo-angular-layout';
 import { ButtonModule, DropDownButtonModule } from '@progress/kendo-angular-buttons';
 
-import { McbGridModule } from './../mcb-grid.module';
+import { NgGridModule } from './../ng-grid.module';
 import { MasterFormComponent } from './master-form.component';
 import { MainPanelModule } from '../../main-panel/main-panel.module';
 import { UtilsModule } from './../../../../common/utils/utils.module';
@@ -25,9 +25,9 @@ const kendoModules = [
   DropDownButtonModule,
 ];
 
-const mcbModules = [
+const ngModules = [
   UtilsModule,
-  McbGridModule,
+  NgGridModule,
   SecurityModule,
   ToggleBtnModule,
   MainPanelModule,
@@ -35,7 +35,7 @@ const mcbModules = [
 ];
 
 @NgModule({
-  imports: [...kendoModules, ...mcbModules],
+  imports: [...kendoModules, ...ngModules],
   declarations: [MasterFormComponent],
   exports: [MasterFormComponent]
 })

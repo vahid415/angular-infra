@@ -42,7 +42,7 @@ export * from './lib/portal/decorators/types';
 
 // Services
 export * from './lib/portal/ui/services/loader.service';
-export * from './lib/portal/ui/services/mcb-confirmation.service';
+export * from './lib/portal/ui/services/confirmation.service';
 export * from './lib/portal/ui/services/navigation.service';
 export * from './lib/portal/ui/services/navigation-guard';
 export * from './lib/portal/ui/services/toast.service';

@@ -1,47 +1,47 @@
 <h3>lookup2:</h3>
-<!-- <mcb-lookup2 [text]="xyz" [(ngModel)]="value" (popupConfirm)="conf($event)" (inputChange)="onInputChange($event)"  required>
+<!-- <ng-lookup2 [text]="xyz" [(ngModel)]="value" (popupConfirm)="conf($event)" (inputChange)="onInputChange($event)"  required>
 
-</mcb-lookup2>
+</ng-lookup2>
 
 {{value}} -->
 
 
-<mcb-main-panel>
-    <form #f="ngForm" mcbForm (do)="test($event)">
-        <mcb-form-control label="label">
-          <mcb-lookup [conditions]="[{key: 'type', value: 'COUNTRY', error: 'geoTypeMustBeCountry'}]" mcbOnlyNumber [required]="true" name="sth" [(ngModel)]="data" valueField="code" textField="name">
-          <mcb-modal-test (onSelectRow)="data = $event"></mcb-modal-test>
-          </mcb-lookup>
-        </mcb-form-control>
+<ng-main-panel>
+    <form #f="ngForm" ngForm (do)="test($event)">
+        <ng-form-control label="label">
+          <ng-lookup [conditions]="[{key: 'type', value: 'COUNTRY', error: 'geoTypeMustBeCountry'}]" ngOnlyNumber [required]="true" name="sth" [(ngModel)]="data" valueField="code" textField="name">
+          <ng-modal-test (onSelectRow)="data = $event"></ng-modal-test>
+          </ng-lookup>
+        </ng-form-control>
         NAME: {{data?.name}}
         <button type="submit" (click)="data = {code: 111, name: 'asdasda'}">{{f.status}}</button>
     </form>
-</mcb-main-panel>
+</ng-main-panel>
 
 ==============================================
 
-<!-- <mcb-main-panel [title]="'changePassword' | translator">
-    <form #form="ngForm" mcbForm (do)="onSaveClick()">
-        <mcb-row>
-            <mcb-column [col_sm]='3'>
-                <mcb-form-control labelKey="currentPassword">
+<!-- <ng-main-panel [title]="'changePassword' | translator">
+    <form #form="ngForm" ngForm (do)="onSaveClick()">
+        <ng-row>
+            <ng-column [col_sm]='3'>
+                <ng-form-control labelKey="currentPassword">
                     <input kendoTextBox name="oldPassword" type="password" [(ngModel)]="model.currentPassword"
                         required />
-                </mcb-form-control>
+                </ng-form-control>
 
-                <mcb-form-control labelKey="newPassword">
+                <ng-form-control labelKey="newPassword">
                     <input kendoTextBox name="newPassword" type="password" [(ngModel)]="model.newPassword" required />
-                </mcb-form-control>
+                </ng-form-control>
 
-                <mcb-form-control labelKey="confirmPassword">
+                <ng-form-control labelKey="confirmPassword">
                     <input kendoTextBox name="confirmPassword" type="password" [(ngModel)]="model.confirmPassword"
                         required  [equalWith]="model.newPassword" [inequalityMessage]="'inequalPassword' | translator" />
-                </mcb-form-control>
-            </mcb-column>
-        </mcb-row>
+                </ng-form-control>
+            </ng-column>
+        </ng-row>
         <hr />
         <button kendoButton type="submit" [icon]="'save'" [disabled]="form.invalid">
             {{ "save" | translator }}
         </button>
     </form>
-</mcb-main-panel> -->
+</ng-main-panel> -->

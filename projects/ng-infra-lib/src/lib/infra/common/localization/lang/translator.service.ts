@@ -26,7 +26,7 @@ export class TranslatorService {
     this.infraDict = this.infraDicts.find(d => d.locale === this.locale);
     if (subsystem instanceof Subsystem && Array.isArray(subsystem.dictionaries)) {
       this.injectedSubsystemDict = subsystem.dictionaries.find(d => d.locale === this.locale);
-      if (subsystem.id === 'MCB_SHARED') {
+      if (subsystem.id === 'NG_SHARED') {
         this.sharedDict = subsystem.dictionaries.find(d => d.locale === this.locale);
         this.dictService.sharedDict.next(this.sharedDict);
       }

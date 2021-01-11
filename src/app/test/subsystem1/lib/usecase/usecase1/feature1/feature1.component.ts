@@ -1,6 +1,6 @@
 import { Component, ViewChild, ViewChildren, QueryList, ContentChild } from '@angular/core';
 import {
-  ToastService, LoaderService, McbConfirmationService, TranslatorService, CommonService, UIService,
+  ToastService, LoaderService, ConfirmationService, TranslatorService, CommonService, UIService,
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbItems
@@ -15,7 +15,7 @@ enum TestEnum {
 }
 
 @Component({
-  selector: 'mcb-test-usecase1-feature1',
+  selector: 'ng-test-usecase1-feature1',
   templateUrl: './feature1.component.html'
 })
 export class Usecase1Feature1Component {
@@ -74,7 +74,7 @@ export class Usecase1Feature1Component {
     private ui: UIService,
     private service1: Service1,
     private activatedRoute: ActivatedRoute,
-    private confirmation: McbConfirmationService,
+    private confirmation: ConfirmationService,
   ) {
     // this.realCustomerStatusValues = this.common.enumToKeyValueArrayByTranslate(TestEnum);
     this.grid.data = [{ code: 'aaaa aaaa aaaa aaaaa aaaaa aaa', status: 'غیر فعال غیرفعال غیرفعال' }]

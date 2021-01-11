@@ -6,7 +6,7 @@ import { TranslatorService } from '../../../../../../../infra/common/localizatio
 import { Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'mcb-portal-user-area-breadcrumb',
+  selector: 'ng-portal-user-area-breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.css'],
 })
@@ -64,7 +64,7 @@ export class PortalUserAreaBreadcrumbComponent {
     const items = this.getBreadcrumbItems();
     if (items.length > 0) {
       const last = items[items.length - 1];
-      this.title.setTitle(`${last[this.breadcrumbItemTextSymbol]} - ${this.translatorService.translate('mcb')}`);
+      this.title.setTitle(`${last[this.breadcrumbItemTextSymbol]} - ${this.translatorService.translate('ng')}`);
     }
   }
 

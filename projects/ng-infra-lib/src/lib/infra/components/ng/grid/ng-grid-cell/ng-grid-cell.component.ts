@@ -1,11 +1,11 @@
 import { Component, Input, OnInit, EventEmitter, Output, ElementRef, OnChanges } from '@angular/core';
-import { McbGridColumnAlign } from '../type/enum/mcb-grid-column-align';
-import { McbGridColumnType } from '../type/enum/mcb-grid-column-type'
+import { NgGridColumnAlign } from '../type/enum/ng-grid-column-align';
+import { NgGridColumnType } from '../type/enum/ng-grid-column-type'
 
 @Component({
-  selector: 'mcb-grid-cell', templateUrl: './mcb-grid-cell.component.html'
+  selector: 'ng-grid-cell', templateUrl: './ng-grid-cell.component.html'
 })
-export class McbGridCellComponent implements OnInit, OnChanges {
+export class NgGridCellComponent implements OnInit, OnChanges {
 
   constructor() {
   }
@@ -13,14 +13,14 @@ export class McbGridCellComponent implements OnInit, OnChanges {
   _alignStyle: string;
   @Input() value: any;
   @Input() cell: Object;
-  @Input() type: McbGridColumnType = McbGridColumnType.STRING;
-  @Input() align: McbGridColumnAlign = McbGridColumnAlign.CENTER;
+  @Input() type: NgGridColumnType = NgGridColumnType.STRING;
+  @Input() align: NgGridColumnAlign = NgGridColumnAlign.CENTER;
   @Input() field: string;
   @Output() initialize: EventEmitter<any> = new EventEmitter();
   @Output() inputChange: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
-    if (!this.type) { this.type = McbGridColumnType.STRING; }
+    if (!this.type) { this.type = NgGridColumnType.STRING; }
     this.getAlign();
     this.initialize.emit(ElementRef);
   }
@@ -31,9 +31,9 @@ export class McbGridCellComponent implements OnInit, OnChanges {
 
   getAlign() {
     if (this.align != null || this.align !== undefined) {
-      this._alignStyle = 'mcb-grid-align-' + this.align;
+      this._alignStyle = 'ng-grid-align-' + this.align;
     } else {
-      this._alignStyle = 'mcb-grid-align-right';
+      this._alignStyle = 'ng-grid-align-right';
     }
   }
 

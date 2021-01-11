@@ -1,4 +1,4 @@
-import { McbGridColumnType } from './enum/mcb-grid-column-type';
+import { NgGridColumnType } from './enum/ng-grid-column-type';
 
 export class MasterFormModel {
   title = '';
@@ -33,7 +33,7 @@ export class MasterFormColumn {
   cellTemplate?: (cellElement: HTMLElement, cellInfo: any) => string;
   sortable?: boolean;
   align?: 'left | right | center';
-  type?: McbGridColumnType;
+  type?: NgGridColumnType;
   locked?: boolean;
   width?: number;
 

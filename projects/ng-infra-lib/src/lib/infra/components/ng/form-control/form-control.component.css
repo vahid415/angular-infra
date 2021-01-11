@@ -2,13 +2,13 @@
   display: block;
 }
 
-.mcb-form-control-label {
+.ng-form-control-label {
   margin: 0;
   display: flex;
   font-size: 90%;
 }
 
-.mcb-form-control-subscript {
+.ng-form-control-subscript {
   display: block;
   line-height: 1;
   height: 1em;
@@ -25,7 +25,7 @@
   }
 }
 
-.mcb-form-control-subscript .error-text {
+.ng-form-control-subscript .error-text {
     display: inline-block;
     animation: errorTextEnterance .08s;
 }

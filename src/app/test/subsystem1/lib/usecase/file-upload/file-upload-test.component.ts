@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {
-    ToastService, LoaderService, McbConfirmationService, TranslatorService,
+    ToastService, LoaderService, ConfirmationService, TranslatorService,
     CommonService, Breadcrumb, BreadcrumbItem
 } from '@app/ng-infra';
 export class SignatureObjectDto {
@@ -10,7 +10,7 @@ export class SignatureObjectDto {
 }
 
 @Component({
-    selector: 'mcb-subsystem1-file-upload-test',
+    selector: 'ng-subsystem1-file-upload-test',
     templateUrl: './file-upload-test.component.html'
 })
 export class FileUploadTestComponent {
@@ -24,7 +24,7 @@ export class FileUploadTestComponent {
         private toast: ToastService,
         private common: CommonService,
         private loader: LoaderService,
-        private confirmation: McbConfirmationService,
+        private confirmation: ConfirmationService,
         trans: TranslatorService
     ) {
     }

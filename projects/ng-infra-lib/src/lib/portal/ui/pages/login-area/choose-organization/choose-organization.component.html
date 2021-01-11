@@ -4,7 +4,7 @@
     به شما در چندین سازمان نقش اعطا شده است.
     با کدام سازمان وارد سامانه می شوید؟
   </p>
-  <form #form="ngForm" mcbForm (do)="login()" autocomplete="off">
+  <form #form="ngForm" appForm (do)="login()" autocomplete="off">
     <label class="userName login-form-control">
       <i class="fa fa-user login-user-icon"></i>
       <kendo-dropdownlist class="drop-down" name="selectedOrg" [data]="orgs" [required]="true"

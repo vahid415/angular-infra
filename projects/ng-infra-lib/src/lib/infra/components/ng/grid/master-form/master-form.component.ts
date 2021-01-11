@@ -3,7 +3,7 @@ import { TooltipDirective } from '@progress/kendo-angular-tooltip';
 import { GridComponent, PageChangeEvent, SelectionEvent } from '@progress/kendo-angular-grid';
 import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild, ChangeDetectorRef } from '@angular/core';
 
-import { McbGridSort } from '../../../../common/types/sort.dto';
+import { NgGridSort } from '../../../../common/types/sort.dto';
 import { BaseMasterPageController } from './base-master-page-controller';
 import { UIService } from './../../../../../portal/ui/services/ui.service';
 import { MainPanelComponent } from './../../main-panel/main-panel.component';
@@ -13,7 +13,7 @@ import { MasterGridOperationOption, MasterGridOption, MasterFormPermission } fro
 import { TranslatorService } from './../../../../common/localization/lang/translator.service';
 
 @Component({
-  selector: 'mcb-master-form',
+  selector: 'ng-master-form',
   templateUrl: './master-form.component.html',
   styles: [ `.kendo-grid-toolbar{
 display: flex !important;
@@ -180,8 +180,8 @@ export class MasterFormComponent implements OnInit {
    * @param sort
    * create sort object as SortDto using kendo grid SortDescriptor
    */
-  handleOrders(sort: SortDescriptor): McbGridSort {
-    const result: McbGridSort = new McbGridSort();
+  handleOrders(sort: SortDescriptor): NgGridSort {
+    const result: NgGridSort = new NgGridSort();
     result.fieldName = sort.field;
     result.operation = sort.dir;
     return result;

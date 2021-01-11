@@ -9,7 +9,7 @@ export const CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR: any = {
 };
 
 @Component({
-  selector: 'mcb-persian-input',
+  selector: 'ng-persian-input',
   templateUrl: 'persian-input.component.html',
   providers: [CUSTOM_INPUT_CONTROL_VALUE_ACCESSOR]
 })

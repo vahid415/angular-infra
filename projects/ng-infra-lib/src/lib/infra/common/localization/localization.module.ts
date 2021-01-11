@@ -1,13 +1,13 @@
 import { NgModule, LOCALE_ID } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslatorPipe } from './lang/translator.pipe';
-import { McbJalaliDatePipe } from './date/jalali-date.pipe';
+import { NgJalaliDatePipe } from './date/jalali-date.pipe';
 import { MessageService } from '@progress/kendo-angular-l10n';
 import { KendoMessageService } from './lang/kendo-message.service';
 
 @NgModule({
   declarations: [
-    McbJalaliDatePipe,
+    NgJalaliDatePipe,
     TranslatorPipe
   ],
   imports: [
@@ -18,7 +18,7 @@ import { KendoMessageService } from './lang/kendo-message.service';
     { provide: MessageService, useClass: KendoMessageService },
   ],
   exports: [
-    McbJalaliDatePipe,
+    NgJalaliDatePipe,
     TranslatorPipe
   ]
 })

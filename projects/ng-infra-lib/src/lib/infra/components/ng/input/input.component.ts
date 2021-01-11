@@ -7,7 +7,7 @@ import {UIService} from "../../../../portal/ui/services/ui.service";
 import {TranslatorService} from "../../../common/localization/lang/translator.service";
 
 @Component({
-  selector: 'mcb-lookup',
+  selector: 'ng-lookup',
   templateUrl: './input.component.html',
   styleUrls: ['./input.component.scss'],
   providers: [{

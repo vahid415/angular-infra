@@ -5,9 +5,9 @@ import menuItems from './menu-items';
 import { environment } from 'src/environments/environment';
 
 const subsystem = new Subsystem();
-subsystem.id = 'MCB_SUBSYSTEM_1';
+subsystem.id = 'NG_SUBSYSTEM_1';
 subsystem.icon = 'dsf';
-subsystem.titleKey = 'MCB_SUBSYSTEM_1';
+subsystem.titleKey = 'NG_SUBSYSTEM_1';
 subsystem.menuItems = menuItems;
 subsystem.dictionaries = [faIRDict, enUSDict];
 subsystem.environment = environment;

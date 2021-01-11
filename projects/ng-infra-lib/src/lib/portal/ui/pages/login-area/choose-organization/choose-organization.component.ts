@@ -5,7 +5,7 @@ import { NavigationService } from '../../../services/navigation.service';
 import { AuthenticationService } from '../../../../security/authentication/authentication.service';
 
 @Component({
-  selector: 'mcb-choose-organization',
+  selector: 'ng-choose-organization',
   templateUrl: './choose-organization.component.html',
   styleUrls: ['./choose-organization.component.scss']
 })

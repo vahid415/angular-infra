@@ -1,9 +1,9 @@
 import {Pipe, PipeTransform} from '@angular/core';
 
 @Pipe({
-  name: 'mcbNumberSeparator'
+  name: 'ngNumberSeparator'
 })
-export class McbNumberSeparatorPipe implements PipeTransform {
+export class NgNumberSeparatorPipe implements PipeTransform {
   constructor() {
   }
   transform(num) {

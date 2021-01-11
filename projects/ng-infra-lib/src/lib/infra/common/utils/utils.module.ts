@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ImagePipe } from './image.pipe';
-import { McbGridTooltipDirective } from './grid-tooltip.directive';
+import { NgGridTooltipDirective } from './grid-tooltip.directive';
 
 
 const DECLARATIONS = [
   ImagePipe,
-  McbGridTooltipDirective
+  NgGridTooltipDirective
 ];
 @NgModule({
   declarations: DECLARATIONS,

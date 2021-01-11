@@ -6,8 +6,8 @@ import {
 import { FileChangeEvent } from './types';
 
 @Component({
-  selector: 'mcb-file-upload',
-  exportAs: 'mcbFileUpload',
+  selector: 'ng-file-upload',
+  exportAs: 'ngFileUpload',
   templateUrl: './file-upload.component.html',
   styleUrls: [ './file-upload.component.css' ],
   providers: [

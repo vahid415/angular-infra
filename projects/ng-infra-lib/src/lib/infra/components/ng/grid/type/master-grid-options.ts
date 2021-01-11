@@ -5,7 +5,7 @@ export class MasterGridOption {
   pageSize = 10;
   sortable = true;
   resizable = true;
-  readonly gridData: McbGridDataResult = new McbGridDataResult([], 0);
+  readonly gridData: GridDataResult = new GridDataResult([], 0);
   start = 0;
   mySelection: Array<any> = [];
   selectable: SelectableSettings = new SelectableSettings(true, false, 'single');
@@ -15,7 +15,7 @@ export class MasterGridOption {
   rowClass: RowClassFn;
 }
 
-export class McbGridDataResult {
+export class GridDataResult {
   data: Array<any>;
   total: number;
   constructor(data: [], total: number) {

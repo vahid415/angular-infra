@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
 import { UserAreaLayoutService } from './user-area-layout.service';
 
 @Component({
-  selector: 'mcb-portal-user-area',
+  selector: 'ng-portal-user-area',
   templateUrl: './user-area-layout.component.html',
   styleUrls: ['./user-area-layout.component.css'],
 })
@@ -18,7 +18,7 @@ export class PortalUserAreaLayoutComponent implements OnInit {
 
   ngOnInit() {
     this.userAreaLayoutService.sideBarToggle.subscribe((showSidebar: any) => {
-      this.showSidebarClass = showSidebar ? '' : 'mcb-sidebar-hide';
+      this.showSidebarClass = showSidebar ? '' : 'ng-sidebar-hide';
     });
   }
 }

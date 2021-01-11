@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { McbWindowComponent } from './mcb-window.component';
+import { NgWindowComponent } from './ng-window.component';
 import { WindowModule } from '@progress/kendo-angular-dialog';
 
 @NgModule({
   declarations: [
-    McbWindowComponent
+    NgWindowComponent
   ],
   imports: [
     CommonModule,
     WindowModule
   ],
   exports: [
-    McbWindowComponent
+    NgWindowComponent
   ]
 })
-export class McbWindowModule { }
+export class NgWindowModule { }

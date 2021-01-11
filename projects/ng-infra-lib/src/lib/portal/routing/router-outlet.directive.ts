@@ -4,8 +4,8 @@ import { Subscription } from 'rxjs';
 import { ComponentTreeService } from './component-tree-service';
 
 @Directive({
-  selector: '[mcbRouterOutlet]',
-  exportAs: 'mcbRouterOutlet',
+  selector: '[ngRouterOutlet]',
+  exportAs: 'ngRouterOutlet',
 })
 export class RouterOutletDirective implements OnDestroy {
   private activateSubscription: Subscription;

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { LoadChildren } from '@angular/router';
 import { Dictionary } from '../../infra/common/localization/types';
 import { EnvironmentDescriptor } from './../../infra/common/types/environment';
-import { McbRoutes } from '../routing/types';
+import { NgRoutes } from '../routing/types';
 
 export const LOCALIZED_MENU_ITEM_TITLE_SYMBOL = Symbol('LOCALIZED_MENU_ITEM_TITLE');
 export const SUBSYSTEM_USECASES_ROUTES = [];
@@ -16,7 +16,7 @@ export class Subsystem {
     faIcon?: string; /** Fontawesome Icon name. */
     menuItems?: MenuItem[];
     dictionaries?: Dictionary[];
-    externalRoutes?: McbRoutes | SubsystemExternalRouteConfig;
+    externalRoutes?: NgRoutes | SubsystemExternalRouteConfig;
 }
 
 export interface WorkflowStateProcessorRoute {
@@ -30,7 +30,7 @@ export type WorkflowStateProcessorRoutes = WorkflowStateProcessorRoute[];
 
 export interface SubsystemExternalRouteConfig {
     stateProcessorsRoutes: WorkflowStateProcessorRoutes;
-    usecasesRoutes: McbRoutes;
+    usecasesRoutes: NgRoutes;
 }
 
 // Menu Items

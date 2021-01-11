@@ -3,7 +3,7 @@ import { AuthenticationService } from '../../../../security/authentication/authe
 import { NavigationService } from '../../../services/navigation.service';
 
 @Component({
-  selector: 'mcb-portal-change-password',
+  selector: 'ng-portal-change-password',
   templateUrl: './change-password.component.html',
   styleUrls: ['./change-password.component.css']
 })

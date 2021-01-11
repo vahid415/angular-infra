@@ -3,7 +3,7 @@ import subsystem from '.';
 import { Subsystem, TranslatorService, CommonService, UIService } from '@app/ng-infra';
 
 @Component({
-    selector: 'mcb-subsystem1-context',
+    selector: 'ng-subsystem1-context',
     templateUrl: './subsystem-context.component.html',
     providers: [
         CommonService,

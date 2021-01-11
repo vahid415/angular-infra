@@ -4,7 +4,7 @@ import { UserAreaLayoutService } from '../../user-area-layout.service';
 import { NbSidebarService } from '@nebular/theme';
 
 @Component({
-  selector: 'mcb-portal-user-area-header',
+  selector: 'ng-portal-user-area-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
@@ -20,7 +20,7 @@ export class PortalUserAreaHeaderComponent implements OnInit {
   ngOnInit() {
     this.layoutService.sideBarToggle.subscribe(showSidebar => {
       if (!showSidebar) {
-        this.showSidebarClass = 'mcb-sidebar-hide';
+        this.showSidebarClass = 'ng-sidebar-hide';
       } else {
         this.showSidebarClass = '';
       }

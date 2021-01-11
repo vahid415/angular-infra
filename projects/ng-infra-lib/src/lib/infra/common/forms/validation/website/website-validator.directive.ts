@@ -3,8 +3,8 @@ import {FormControl, NG_VALIDATORS, ValidationErrors, Validator} from '@angular/
 import {WebsiteValidatorFn} from './website-validator';
 
 @Directive({
-  selector: '[mcbWebsiteValidator]',
-  exportAs: 'mcbWebsiteValidator',
+  selector: '[ngWebsiteValidator]',
+  exportAs: 'ngWebsiteValidator',
   providers: [{
     provide: NG_VALIDATORS,
     useExisting: WebsiteValidatorDirective,

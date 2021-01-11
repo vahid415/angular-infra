@@ -6,7 +6,7 @@ import { NavigationService } from '../../../services/navigation.service';
 import { AuthenticationService } from '../../../../security/authentication/authentication.service';
 
 @Component({
-  selector: 'mcb-login',
+  selector: 'ng-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })

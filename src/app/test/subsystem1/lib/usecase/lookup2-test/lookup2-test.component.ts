@@ -7,7 +7,7 @@ import { ChangePasswordModel } from './change-password';
 import { ChangePasswordService } from './change-password.service';
 
 @Component({
-    selector: 'mcb-subsystem1-lookup2-test',
+    selector: 'ng-subsystem1-lookup2-test',
     templateUrl: './lookup2-test.component.html'
 })
 export class Lookup2TestComponent {

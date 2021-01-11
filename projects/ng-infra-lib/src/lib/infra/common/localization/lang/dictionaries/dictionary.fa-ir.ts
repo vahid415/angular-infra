@@ -3,9 +3,6 @@ import { Dictionary } from '../../types';
 export default {
   locale: 'faIR',
   entries: {
-    maskanBank: 'ng',
-    mcb: 'angular sample',
-    coreBanking: 'angular sample',
     stackTrace: 'ردیابی پشته',
     search: 'جستجو',
     confirmPassword: 'تایید کلمه عبور',
@@ -78,7 +75,7 @@ export default {
     minlength: 'عبارت وارد شده نباید کمتر از {0} کاراکتر باشد',
     maxlength: 'عبارت وارد شده نباید بیشتر از {0} کاراکتر باشد',
     pattern: 'فرمت وارد شده صحیح نمی باشد',
-    'mcbCompare~': '{0} می بایست {1} {2} باشد!',
+    compare: '{0} می بایست {1} {2} باشد!',
 
     equalValueEqualType: 'مقدار و نوعش مساوی با',
     not_equal_nalue_not_equal_type: 'مقدار و نوعش مخالف',

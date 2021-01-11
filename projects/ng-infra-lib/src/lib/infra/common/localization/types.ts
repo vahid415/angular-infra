@@ -6,7 +6,7 @@ export interface Dictionary {
   entries: { [key: string]: string };
 }
 
-export interface McbDateDescriptor {
+export interface NgDateDescriptor {
   year: number;
   month: number;
   day: number;
@@ -15,15 +15,15 @@ export interface McbDateDescriptor {
   second?: number;
 }
 
-export type McbDateFormat = 'YYYY-MM-DD' | 'YYYY-M-D' | 'YYYY/M/DD' | 'YYYY/MM/D'
+export type NgDateFormat = 'YYYY-MM-DD' | 'YYYY-M-D' | 'YYYY/M/DD' | 'YYYY/MM/D'
   | 'YYYY/MM/DD' | 'YYYY/M/D' | 'HH:mm' | 'HH:mm:ss' | string;
-export type McbDateManipulationUnit = 'days' | 'months' | 'years' | 'hours' | 'minutes' | 'seconds';
-export type McbCalendarType = 'jalali' | 'gregorian';
+export type NgDateManipulationUnit = 'days' | 'months' | 'years' | 'hours' | 'minutes' | 'seconds';
+export type NgCalendarType = 'jalali' | 'gregorian';
 
-export interface McbDateParseOptions {
+export interface NgDateParseOptions {
   // dateSeperator: string;
 }
 
-export interface McbDateFormatOptions {
+export interface NgDateFormatOptions {
   // dateSeperator: string;
 }

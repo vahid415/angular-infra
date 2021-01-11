@@ -4,7 +4,7 @@ import { TooltipDirective } from '@progress/kendo-angular-tooltip';
 import { PersianNumber } from '../../../common/forms/masks/persian-number';
 
 @Component({
-  selector: 'mcb-money-input',
+  selector: 'ng-money-input',
   templateUrl: 'money-input.component.html',
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => MoneyInputComponent), multi: true }

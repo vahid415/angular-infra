@@ -1,4 +1,4 @@
-export class McbGridSort {
+export class NgGridSort {
   fieldName: string;
   operation: any;
 

@@ -72,23 +72,23 @@ export * from './lib/infra/components/ng/form-group/form-group.component';
 export * from './lib/infra/components/ng/form-group/form-group.module';
 
 // grid
-export * from './lib/infra/components/ng/grid/mcb-grid-search.directive';
-export * from './lib/infra/components/ng/grid/mcb-grid.component';
-export * from './lib/infra/components/ng/grid/mcb-grid.module';
-export * from './lib/infra/components/ng/grid/mcb-grid-cell/mcb-grid-cell.component';
-export * from './lib/infra/components/ng/grid/mcb-grid-search/mcb-grid-search-in.component';
-export * from './lib/infra/components/ng/grid/mcb-grid-search/mcb-grid-search.component';
-export * from './lib/infra/components/ng/grid/type/enum/mcb-grid-column-align';
-export * from './lib/infra/components/ng/grid/type/enum/mcb-grid-column-type';
-export * from './lib/infra/components/ng/grid/type/enum/mcb-grid-action-type';
+export * from './lib/infra/components/ng/grid/ng-grid-search.directive';
+export * from './lib/infra/components/ng/grid/ng-grid.component';
+export * from './lib/infra/components/ng/grid/ng-grid.module';
+export * from './lib/infra/components/ng/grid/ng-grid-cell/ng-grid-cell.component';
+export * from './lib/infra/components/ng/grid/ng-grid-search/ng-grid-search-in.component';
+export * from './lib/infra/components/ng/grid/ng-grid-search/ng-grid-search.component';
+export * from './lib/infra/components/ng/grid/type/enum/ng-grid-column-align';
+export * from './lib/infra/components/ng/grid/type/enum/ng-grid-column-type';
+export * from './lib/infra/components/ng/grid/type/enum/ng-grid-action-type';
 export * from './lib/infra/components/ng/grid/type/crud-operations.interface';
 export * from './lib/infra/components/ng/grid/type/generic-crud-service';
 export * from './lib/infra/components/ng/grid/type/http';
-export * from './lib/infra/components/ng/grid/type/mcb-grid-column-dto';
+export * from './lib/infra/components/ng/grid/type/ng-grid-column-dto';
 export * from './lib/infra/components/ng/grid/type/master-form-model';
 export * from './lib/infra/components/ng/grid/type/master-grid-options';
 export * from './lib/infra/components/ng/grid/type/master-grid-operation-option';
-export * from './lib/infra/components/ng/grid/type/mcb-grid-action-dto';
+export * from './lib/infra/components/ng/grid/type/ng-grid-action-dto';
 export * from './lib/infra/components/ng/grid/type/permissions';
 export * from './lib/infra/components/ng/grid/master-form/master-form.module';
 export * from './lib/infra/components/ng/grid/master-form/base-master-page-controller';
@@ -124,7 +124,7 @@ export * from './lib/infra/components/ng/tree-view/tree-view.component';
 export * from './lib/infra/components/ng/tree-view/tree-view.module';
 
 // window
-export * from './lib/infra/components/ng/window/mcb-window.component';
+export * from './lib/infra/components/ng/window/ng-window.component';
 export * from './lib/infra/components/ng/window/window.module';
 
 // Lookup2 ( new lookup)

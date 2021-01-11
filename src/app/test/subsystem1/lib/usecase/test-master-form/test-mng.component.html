@@ -11,75 +11,75 @@
   </button>
 </div> -->
 
-<mcb-master-form [(value)]="selectedMasterEntity" [controller]="this" [permission]='permissions'
+<ng-master-form [(value)]="selectedMasterEntity" [controller]="this" [permission]='permissions'
                  (selectionChange)="test($event)" [operationTemplate]="operationTemplate"
                  [detailTemplate]="detailTemplate">
   <form search-items #searchForm='ngForm'>
-    <mcb-row>
-      <mcb-column col_md="3">
-        <mcb-form-control labelKey="characterSeries">
+    <ng-row>
+      <ng-column col_md="3">
+        <ng-form-control labelKey="characterSeries">
           <input kendoTextBox [(ngModel)]="searchFilter[0].value" name="code"
                  (keyup)="$event.keyCode === 13 ? startSearch(): null" />
-        </mcb-form-control>
-      </mcb-column>
-      <mcb-column col_md="3">
-        <mcb-form-control labelKey="seriesFrom">
+        </ng-form-control>
+      </ng-column>
+      <ng-column col_md="3">
+        <ng-form-control labelKey="seriesFrom">
           <input kendoTextBox [(ngModel)]="searchFilter[1].value" name="title" />
-        </mcb-form-control>
-      </mcb-column>
-      <mcb-column col_md="3">
-        <mcb-form-control labelKey="seriesTo">
+        </ng-form-control>
+      </ng-column>
+      <ng-column col_md="3">
+        <ng-form-control labelKey="seriesTo">
           <input kendoTextBox [(ngModel)]="searchFilter[2].value" name="active" />
-        </mcb-form-control>
-      </mcb-column>
-      <mcb-column [col_md]="'3'">
-        <mcb-form-control [label]="'channel-active' | translator">
+        </ng-form-control>
+      </ng-column>
+      <ng-column [col_md]="'3'">
+        <ng-form-control [label]="'channel-active' | translator">
           <kendo-dropdownlist id="search-channel-active" name="search-channel-active" [valueField]="'value'"
                               [textField]="'key'" [valuePrimitive]="true" [data]="channelStatusValues"
                               [defaultItem]="defaultItem" [(ngModel)]="searchFilter[3].value">
           </kendo-dropdownlist>
-        </mcb-form-control>
-      </mcb-column>
-    </mcb-row>
+        </ng-form-control>
+      </ng-column>
+    </ng-row>
   </form>
 
   <div addEdit-items>
     <form #editForm="ngForm">
-      <mcb-row>
-        <mcb-column col_md="3">
-          <mcb-form-control labelKey="characterSeries">
+      <ng-row>
+        <ng-column col_md="3">
+          <ng-form-control labelKey="characterSeries">
             <input kendoTextBox [(ngModel)]="selectedMasterEntity.characterSeries" required name="characterSeries"
                    [disabled]="viewMode" />
-          </mcb-form-control>
-        </mcb-column>
-        <mcb-column col_md="3">
-          <mcb-form-control labelKey="serialFrom">
+          </ng-form-control>
+        </ng-column>
+        <ng-column col_md="3">
+          <ng-form-control labelKey="serialFrom">
             <input kendoTextBox type="number" [(ngModel)]="selectedMasterEntity.serialFrom" [disabled]="viewMode"
                    name="serialFrom" />
-          </mcb-form-control>
-        </mcb-column>
-        <mcb-column col_md="3">
-          <mcb-form-control labelKey="serialTo">
+          </ng-form-control>
+        </ng-column>
+        <ng-column col_md="3">
+          <ng-form-control labelKey="serialTo">
             <input kendoTextBox type="number" [(ngModel)]="selectedMasterEntity.serialTo" name="serialTo"
                    [disabled]="viewMode" />
-          </mcb-form-control>
-        </mcb-column>
-        <mcb-column col_md="3">
-          <mcb-form-control labelKey="seriesFrom">
+          </ng-form-control>
+        </ng-column>
+        <ng-column col_md="3">
+          <ng-form-control labelKey="seriesFrom">
             <input kendoTextBox type="number" [(ngModel)]="selectedMasterEntity.seriesFrom" name="seriesFrom"
                    [disabled]="viewMode" />
-          </mcb-form-control>
-        </mcb-column>
-        <mcb-column col_md="3">
-          <mcb-form-control labelKey="replica">
-            <mcb-checkbox name="replica" [(ngModel)]="selectedMasterEntity.replica" [disabled]="viewMode">
-            </mcb-checkbox>
-          </mcb-form-control>
-        </mcb-column>
-      </mcb-row>
+          </ng-form-control>
+        </ng-column>
+        <ng-column col_md="3">
+          <ng-form-control labelKey="replica">
+            <ng-checkbox name="replica" [(ngModel)]="selectedMasterEntity.replica" [disabled]="viewMode">
+            </ng-checkbox>
+          </ng-form-control>
+        </ng-column>
+      </ng-row>
     </form>
   </div>
-</mcb-master-form>
+</ng-master-form>
 
 <ng-template #operationTemplate let-item="row">
   <!-- <button kendoButton kendoTooltip title="{{'delete' | translator}}"
@@ -91,10 +91,10 @@
   <button kendoButton kendoTooltip title="{{'edit' | translator}}"
           [disabled]="item.id !== masterFormComponent.selectedRow.id || gridOption.selectable.mode === 'multiple'"
           iconClass="fa fa-edit green" (click)="beforeEditSelectedEntity(item)"></button>
-  <mcb-toggle kendoButton kendoTooltip title="{{'edit' | translator}}"
+  <ng-toggle kendoButton kendoTooltip title="{{'edit' | translator}}"
               [disabled]="item.id !== masterFormComponent.selectedRow.id" [(checked)]="item.active"
               (change)="beforeChangeToggle('status', item)" kendoTooltip>
-  </mcb-toggle>
+  </ng-toggle>
 </ng-template>
 
 <ng-template #detailTemplate let-item="row">
@@ -110,7 +110,7 @@
   <div class="row">
     <div class="pr-2">
       <p dir="rtl"><strong>{{'insertDate' |translator}}:</strong>
-        {{item.insertDate | mcbJalaliDate}}</p>
+        {{item.insertDate | ngJalaliDate}}</p>
     </div>
   </div>
 </ng-template>

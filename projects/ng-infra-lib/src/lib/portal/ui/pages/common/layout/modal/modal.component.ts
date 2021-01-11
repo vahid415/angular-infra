@@ -4,7 +4,7 @@ import { Toast } from '../../../../services/types';
 import { UIMessageBrokerService } from '../../../../services/ui-message-broker.service';
 
 @Component({
-  selector: 'mcb-modal',
+  selector: 'ng-modal',
   templateUrl: './modal.component.html',
 })
 export class PortalModalComponent implements OnInit {

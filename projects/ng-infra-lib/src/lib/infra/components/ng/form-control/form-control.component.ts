@@ -14,12 +14,12 @@ import {RequiredFieldDirective} from './required.directive';
 import {ErrorMessageType} from '../../../common/types/error-message';
 
 @Component({
-  selector: 'mcb-form-control',
+  selector: 'ng-form-control',
   templateUrl: './form-control.component.html',
   styleUrls: ['./form-control.component.css'],
   // tslint:disable-next-line: use-host-property-decorator
   host: {
-    '[class]': '"mcb-form-control"'
+    '[class]': '"ng-form-control"'
   }
 })
 export class FormControlComponent implements OnInit, AfterContentChecked {

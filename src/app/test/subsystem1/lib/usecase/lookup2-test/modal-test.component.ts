@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 @Component({
-  selector: 'mcb-modal-test',
+  selector: 'ng-modal-test',
   templateUrl: './modal-test.component.html'
 })
 export class ModalTestComponent implements OnInit {

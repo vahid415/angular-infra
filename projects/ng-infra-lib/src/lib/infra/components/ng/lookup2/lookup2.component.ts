@@ -5,8 +5,8 @@ import { LookupInputChangeEvent, LookupConfirmEvent } from './types';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'mcb-lookup2',
-  exportAs: 'mcb-lookup2',
+  selector: 'ng-lookup2',
+  exportAs: 'ng-lookup2',
   templateUrl: './lookup2.component.html',
   styleUrls: ['./lookup2.component.css'],
   providers: [

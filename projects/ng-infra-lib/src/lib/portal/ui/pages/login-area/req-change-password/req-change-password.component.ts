@@ -4,7 +4,7 @@ import { AuthenticationService } from '../../../../security/authentication/authe
 import { NavigationService } from './../../../services/navigation.service';
 
 @Component({
-  selector: 'mcb-req-change-password',
+  selector: 'ng-req-change-password',
   templateUrl: './req-change-password.component.html',
   styleUrls: ['./req-change-password.component.css']
 })

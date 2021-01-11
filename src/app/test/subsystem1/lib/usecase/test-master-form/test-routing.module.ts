@@ -1,14 +1,14 @@
-import { McbRouterModule, McbRoutes } from '@app/ng-infra';
+import { NgRouterModule, NgRoutes } from '@app/ng-infra';
 import { TestMngComponent } from './test.mng.component';
 import { NgModule } from '@angular/core';
 
-export const routes: McbRoutes = [{
+export const routes: NgRoutes = [{
   path: '',
   component: TestMngComponent,
 }
 ];
 
 @NgModule({
-  imports: [McbRouterModule.forChild(routes)],
+  imports: [NgRouterModule.forChild(routes)],
 })
 export class TestMngRoutingModule { }

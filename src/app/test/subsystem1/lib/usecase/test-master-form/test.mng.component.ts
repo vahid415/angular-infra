@@ -1,7 +1,7 @@
 import { NgForm } from '@angular/forms';
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import {
-  BaseMasterPageController, FilterOperation, MasterFormPermission, MasterGridOption, McbGridColumnType,
+  BaseMasterPageController, FilterOperation, MasterFormPermission, MasterGridOption, NgGridColumnType,
   TranslatorService
 } from '@app/ng-infra';
 import { map } from 'rxjs/operators';
@@ -10,7 +10,7 @@ import { TestMngService } from './test-mng.service';
 import { DetailExpandEvent } from '@progress/kendo-angular-grid';
 
 @Component({
-  selector: 'mcb-test-mng',
+  selector: 'ng-test-mng',
   templateUrl: './test-mng.component.html',
 })
 export class TestMngComponent extends BaseMasterPageController implements AfterViewInit {
@@ -90,7 +90,7 @@ export class TestMngComponent extends BaseMasterPageController implements AfterV
     });
     this.addMasterGridColumn({
       field: 'replica',
-      type: McbGridColumnType.TOGGLE,
+      type: NgGridColumnType.TOGGLE,
     });
 
     // this.addMasterGridColumn({

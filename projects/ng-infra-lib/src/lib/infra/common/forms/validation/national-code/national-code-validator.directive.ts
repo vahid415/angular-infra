@@ -4,7 +4,7 @@ import { NationalCodeValidatorFn } from './national-code-validator';
 
 
 @Directive({
-  selector: '[mcbNationalCodeValidator], [mcbNationalCode]', exportAs: 'mcbNationalCodeValidator',
+  selector: '[ngNationalCodeValidator], [ngNationalCode]', exportAs: 'ngNationalCodeValidator',
   providers: [
     {
       provide: NG_VALIDATORS,

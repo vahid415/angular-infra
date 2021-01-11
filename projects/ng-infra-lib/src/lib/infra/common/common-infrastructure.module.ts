@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 import { UtilsModule } from './utils/utils.module';
-import { McbFormsModule } from './forms/forms.module';
+import { NgFormsModule } from './forms/forms.module';
 import { CommonService } from './utils/common.service';
 import { LocalizationModule } from './localization/localization.module';
 
@@ -16,7 +16,7 @@ import { LocalizationModule } from './localization/localization.module';
     FormsModule,
 
     UtilsModule,
-    McbFormsModule,
+    NgFormsModule,
     LocalizationModule,
   ], providers: [CommonService]
 })

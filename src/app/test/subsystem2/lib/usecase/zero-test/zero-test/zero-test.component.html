@@ -1,13 +1,13 @@
-<mcb-main-panel title="{{'fee' | translator}}">
-    <form mcbForm #form="ngForm">
+<ng-main-panel title="{{'fee' | translator}}">
+    <form ngForm #form="ngForm">
 
-        <mcb-row>
-            <mcb-column col_md="4">
+        <ng-row>
+            <ng-column col_md="4">
 
-                <mcb-form-control labelKey='fee'>
-                    <input kendoTextBox name="fee" [(ngModel)]="fee" mcbOnlyNumber>
-                </mcb-form-control>
-            </mcb-column>
-        </mcb-row>
+                <ng-form-control labelKey='fee'>
+                    <input kendoTextBox name="fee" [(ngModel)]="fee" ngOnlyNumber>
+                </ng-form-control>
+            </ng-column>
+        </ng-row>
     </form>
-</mcb-main-panel>
+</ng-main-panel>

@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import {
-  ToastService, LoaderService, McbConfirmationService, TranslatorService,
+  ToastService, LoaderService, ConfirmationService, TranslatorService,
   CommonService, UIService, Breadcrumb, BreadcrumbItem
 } from '@app/ng-infra';
 import { Service1 } from '../../../common/services/service1';
 
 @Component({
-  selector: 'mcb-subsystem2-usecase1-feature1',
+  selector: 'ng-subsystem2-usecase1-feature1',
   templateUrl: './feature1.component.html'
 })
 export class Usecase1Feature1Component {
@@ -18,7 +18,7 @@ export class Usecase1Feature1Component {
     private loader: LoaderService,
     private ui: UIService,
     private service1: Service1,
-    private confirmation: McbConfirmationService,
+    private confirmation: ConfirmationService,
     trans: TranslatorService
   ) {
 

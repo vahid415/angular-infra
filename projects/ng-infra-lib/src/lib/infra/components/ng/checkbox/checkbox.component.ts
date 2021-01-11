@@ -2,7 +2,7 @@ import { Component, forwardRef, Input } from '@angular/core';
 import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR, ValidationErrors, Validator } from '@angular/forms';
 
 @Component({
-  selector: 'mcb-checkbox',
+  selector: 'ng-checkbox',
   templateUrl: './checkbox.component.html',
   providers: [
     { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => CheckboxComponent), multi: true }

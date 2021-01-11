@@ -3,7 +3,7 @@ import { AbstractControl, ControlValueAccessor, NG_VALUE_ACCESSOR, ValidationErr
 import { IntlService } from '@progress/kendo-angular-intl';
 
 @Component({
-  selector: 'mcb-time-picker',
+  selector: 'ng-time-picker',
   templateUrl: './time-picker.component.html',
   providers: [{ provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => TimePickerComponent), multi: true }]
 })

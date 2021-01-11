@@ -4,8 +4,8 @@ import {
 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR, Validator, AbstractControl, ValidationErrors, NG_VALIDATORS } from '@angular/forms';
 
-import { McbDate } from '../../../common/localization/date/date';
-import { McbDateDescriptor } from '../../../common/localization/types';
+import { NgDate } from '../../../common/localization/date/date';
+import { NgDateDescriptor } from '../../../common/localization/types';
 import { NgbDatepickerI18nPersian } from '../../../common/localization/date/ngb-date-picker-i18n-persian';
 
 
@@ -26,30 +26,30 @@ import { NgbDatepickerI18nPersian } from '../../../common/localization/date/ngb-
 // }
 
 @Component({
-  selector: 'mcb-date-picker',
-  exportAs: 'mcbDatePicker',
+  selector: 'ng-date-picker',
+  exportAs: 'ngDatePicker',
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.css'],
   encapsulation: ViewEncapsulation.None,
   providers: [
-    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => McbDatePickerComponent), multi: true },
-    { provide: NG_VALIDATORS, useExisting: forwardRef(() => McbDatePickerComponent), multi: true, },
+    { provide: NG_VALUE_ACCESSOR, useExisting: forwardRef(() => NgDatePickerComponent), multi: true },
+    { provide: NG_VALIDATORS, useExisting: forwardRef(() => NgDatePickerComponent), multi: true, },
     { provide: NgbCalendar, useClass: NgbCalendarPersian },
     { provide: NgbDatepickerI18n, useClass: NgbDatepickerI18nPersian },
     // { provide: NgbDateParserFormatter, useClass: NgbDateParserFormatterPersian },
   ]
 })
-export class McbDatePickerComponent implements ControlValueAccessor, Validator {
+export class NgDatePickerComponent implements ControlValueAccessor, Validator {
   @Input() mode: string; // for backward compatibility, will be removed in the future.
   @Input() disabled: boolean;
   @Input() open = false;
-  @Input() min: McbDate;
-  @Input() max: McbDate;
-  @Input() set value(v: McbDate) {
-    if (v instanceof McbDate || v === null || v === undefined) {
+  @Input() min: NgDate;
+  @Input() max: NgDate;
+  @Input() set value(v: NgDate) {
+    if (v instanceof NgDate || v === null || v === undefined) {
       this._date = v;
     } else {
-      throw new Error('invalid date value. valid date values: McbDate|null|undefined.');
+      throw new Error('invalid date value. valid date values: NgDate|null|undefined.');
     }
 
     this._isValueSet = true;
@@ -61,13 +61,13 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
     return this._date;
   }
 
-  @Output() valueChange = new EventEmitter<McbDate>();
+  @Output() valueChange = new EventEmitter<NgDate>();
 
   // private members
   _datePickerValue: any;
   _text: string;
   @ViewChild('inputRef', { read: ElementRef }) private _inputRef: ElementRef;
-  private _date: McbDate;
+  private _date: NgDate;
   private _isValueSet: boolean;
   private _onChangeCallback: any = () => { };
   private _onTouchedCallback: any = () => { };
@@ -97,10 +97,10 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
       try {
         const sp = this._text.split('/');
         const format = `${'Y'.repeat(sp[0].length)}/${'M'.repeat(sp[1].length)}/${'D'.repeat(sp[2].length)}`;
-        this._date = McbDate.parseJalaali(this._text, format);
+        this._date = NgDate.parseJalaali(this._text, format);
         this._datePickerValue = this._date.toJalaali();
       } catch {
-        this._date = McbDate.invalid();
+        this._date = NgDate.invalid();
       }
     }
 
@@ -109,7 +109,7 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
 
   _onDateSelect(date: NgbDateStruct) {
     this.open = false;
-    this._date = McbDate.fromJalaali(date as McbDateDescriptor);
+    this._date = NgDate.fromJalaali(date as NgDateDescriptor);
     this._datePickerValue = date;
     this._updateText();
     this.fireChangeEvents();
@@ -128,7 +128,7 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
   }
 
   _updateText() {
-    this._text = this._date instanceof McbDate ? this._date.formatJalaali('YYYY/MM/DD') : '';
+    this._text = this._date instanceof NgDate ? this._date.formatJalaali('YYYY/MM/DD') : '';
   }
 
   _min() {
@@ -160,7 +160,7 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
       /* User has set "value" property. this method is called becuse the user also has put a
          ngModel directive on the input (this is mandatory).
          we should not go further beacuse this component ONLY works with one of these values:
-         "string dates (ngModel) or McbDate (comes from "value" property)
+         "string dates (ngModel) or NgDate (comes from "value" property)
 
          We should ignore the value that is being written. so, we call fireChangeEvents() to 
          rewrite it's NgModel value (by calling  this._onChangeCallback())
@@ -172,7 +172,7 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
     if (value === null || value === undefined || value === '') {
       this._date = null;
     } else if (typeof value === 'string') {
-      this._date = McbDate.parseGregorian(value, 'YYYY-MM-DD');
+      this._date = NgDate.parseGregorian(value, 'YYYY-MM-DD');
       this._datePickerValue = this._date.toJalaali();
     } else {
       throw new Error('invalid date value');
@@ -196,21 +196,21 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
 
   // Validator Implementation
   validate(c: AbstractControl): ValidationErrors {
-    const err: any = { mcbDatePicker: {} };
+    const err: any = { NgDatePicker: {} };
 
     if (!this._date) {
       return null;
     }
 
     if (!this._date.isValid()) {
-      err.mcbDatePicker.invalid = {
+      err.NgDatePicker.invalid = {
         value: this._text
       };
       return err;
     }
 
     if (this.min && this._date.isBefore(this.min)) {
-      err.mcbDatePicker.min = {
+      err.NgDatePicker.min = {
         min: this.min,
         date: this._date
       };
@@ -218,7 +218,7 @@ export class McbDatePickerComponent implements ControlValueAccessor, Validator {
     }
 
     if (this.max && this._date.isAfter(this.max)) {
-      err.mcbDatePicker.max = {
+      err.NgDatePicker.max = {
         max: this.max,
         date: this._date
       };

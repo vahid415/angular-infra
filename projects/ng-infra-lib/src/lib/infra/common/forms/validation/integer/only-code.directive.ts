@@ -2,7 +2,7 @@ import { Directive, HostListener, Renderer2, ElementRef } from '@angular/core';
 import { NgControl } from '@angular/forms';
 
 @Directive({
-  selector: '[mcbOnlyCode]'
+  selector: '[ngOnlyCode]'
 })
 export class OnlyCodeDirective {
 

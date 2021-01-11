@@ -4,7 +4,7 @@ import { ConfirmationDto } from './types';
 @Injectable({
   providedIn: 'root'
 })
-export class McbConfirmationService {
+export class ConfirmationService {
   // tslint:disable-next-line: variable-name
   @Output() _open: EventEmitter<ConfirmationDto> = new EventEmitter<ConfirmationDto>();
 
