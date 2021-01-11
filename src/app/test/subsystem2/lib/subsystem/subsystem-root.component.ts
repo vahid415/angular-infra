@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Breadcrumb, BreadcrumbItem } from '@navaco/mcb-infra';
+import { Breadcrumb, BreadcrumbItem } from '@app/ng-infra';
 
 @Component({
     selector: 'mcb-subsystem2-root',

@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { InfrastructureModule, Lookup2Module } from '@navaco/mcb-infra';
+import { InfrastructureModule, Lookup2Module } from '@app/ng-infra';
 import { RouterModule } from '@angular/router';
 import { Lookup2TestComponent } from './lookup2-test.component';
 import { ModalTestComponent } from './modal-test.component';

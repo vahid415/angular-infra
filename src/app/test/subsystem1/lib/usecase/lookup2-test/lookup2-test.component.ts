@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { TranslatorService, ToastService, Breadcrumb, BreadcrumbItem } from '@navaco/mcb-infra';
-import { LookupInputChangeEvent, LookupConfirmEvent } from '@navaco/mcb-infra';
+import { TranslatorService, ToastService, Breadcrumb, BreadcrumbItem } from '@app/ng-infra';
+import { LookupInputChangeEvent, LookupConfirmEvent } from '@app/ng-infra';
 import { of } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 import { ChangePasswordModel } from './change-password';

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthorizationGuard, NavigationGuard, PortalUserAreaLayoutComponent, SUBSYSTEM_USECASES_ROUTES } from '@navaco/mcb-infra';
+import { AuthorizationGuard, NavigationGuard, PortalUserAreaLayoutComponent, SUBSYSTEM_USECASES_ROUTES } from '@app/ng-infra';
 
 const routes: Routes = [
   {

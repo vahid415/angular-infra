@@ -1,4 +1,4 @@
-import { InfrastructureModule } from '@navaco/mcb-infra';
+import { InfrastructureModule } from '@app/ng-infra';
 import { NgModule } from '@angular/core';
 import { TestMngComponent } from './test.mng.component';
 import { TestMngService } from './test-mng.service';

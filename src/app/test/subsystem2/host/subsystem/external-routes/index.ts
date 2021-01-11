@@ -1,5 +1,5 @@
 import { SubsystemContextComponent } from './../../../lib/subsystem/subsystem-context.component';
-import { SubsystemExternalRouteConfig } from '@navaco/mcb-infra';
+import { SubsystemExternalRouteConfig } from '@app/ng-infra';
 import { SubsystemRootComponent } from '../../../lib/subsystem/subsystem-root.component';
 
 export default {

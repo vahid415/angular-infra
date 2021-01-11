@@ -1,4 +1,4 @@
-import { Dictionary } from '@navaco/mcb-infra';
+import { Dictionary } from '@app/ng-infra';
 
 export default {
   locale: 'faIR',

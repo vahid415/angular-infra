@@ -14,13 +14,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "mcb",
+      "ng",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "mcb",
+      "ng",
       "kebab-case"
     ],
     "import-blacklist": [

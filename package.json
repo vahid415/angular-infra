@@ -1,13 +1,12 @@
 {
-  "name": "@navaco/mcb-infra-app",
+  "name": "@app/ng-infra-app",
   "version": "1.0.0",
   "scripts": {
     "start": "ng serve",
-    "build-lib": "ng build mcb-infra-lib --prod",
-    "publish-lib": "npm publish dist/mcb-infra-lib",
+    "build-lib": "ng build ng-infra-lib --prod",
+    "publish-lib": "npm publish dist/ng-infra-lib",
     "build-publish-lib": "npm run build-lib && npm run publish-lib",
     "build-app": "ng build",
-    "npm-set-registry-navaco": "npm config set registry=http://10.12.126.2:9000/",
     "npm-set-registry-default": "npm config set registry=https://registry.npmjs.org",
     "npm-login": "npm login"
   },

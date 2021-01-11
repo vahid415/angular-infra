@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {
   ToastService, LoaderService, McbConfirmationService, TranslatorService,
   CommonService, UIService, Breadcrumb, BreadcrumbItem
-} from '@navaco/mcb-infra';
+} from '@app/ng-infra';
 import { Service1 } from '../../../common/services/service1';
 
 @Component({

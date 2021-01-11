@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import subsystem from '.';
-import { Subsystem, TranslatorService, CommonService, UIService } from '@navaco/mcb-infra';
+import { Subsystem, TranslatorService, CommonService, UIService } from '@app/ng-infra';
 
 @Component({
     selector: 'mcb-subsystem1-context',

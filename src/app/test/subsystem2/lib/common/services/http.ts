@@ -1,5 +1,5 @@
 import { Injectable, Injector } from '@angular/core';
-import { McbHttpClient } from '@navaco/mcb-infra';
+import { McbHttpClient } from '@app/ng-infra';
 
 @Injectable({
   providedIn: 'root'

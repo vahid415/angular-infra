@@ -9,7 +9,7 @@
 
 # dependencies
 /node_modules
-/projects/mcb-infra-lib/node_modules
+/projects/ng-infra-lib/node_modules
 
 # profiling files
 chrome-profiler-events*.json

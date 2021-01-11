@@ -1,4 +1,4 @@
-import { McbRouterModule, McbRoutes } from '@navaco/mcb-infra';
+import { McbRouterModule, McbRoutes } from '@app/ng-infra';
 import { TestMngComponent } from './test.mng.component';
 import { NgModule } from '@angular/core';
 

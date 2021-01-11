@@ -1,4 +1,4 @@
-import { MenuItems } from '@navaco/mcb-infra';
+import { MenuItems } from '@app/ng-infra';
 
 export default [{
   code: 100,

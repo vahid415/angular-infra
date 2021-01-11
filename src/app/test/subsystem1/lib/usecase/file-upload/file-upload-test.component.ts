@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {
     ToastService, LoaderService, McbConfirmationService, TranslatorService,
     CommonService, Breadcrumb, BreadcrumbItem
-} from '@navaco/mcb-infra';
+} from '@app/ng-infra';
 export class SignatureObjectDto {
     base64Content: string;
     fileName: string;

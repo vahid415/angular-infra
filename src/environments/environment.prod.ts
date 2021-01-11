@@ -1,4 +1,4 @@
-import { EnvironmentDescriptor } from '@navaco/mcb-infra';
+import { EnvironmentDescriptor } from '@app/ng-infra';
 
 export const environment: EnvironmentDescriptor = {
     name: 'prod',

@@ -1,7 +1,7 @@
 import { TestMngDTO } from './../../usecase/test-master-form/test-mng.model';
 import { Injectable, Injector } from '@angular/core';
 import { Subsystem1Http } from './http';
-import { GenericCrudService } from '@navaco/mcb-infra';
+import { GenericCrudService } from '@app/ng-infra';
 
 @Injectable({
   providedIn: 'root'

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { McbDate, PrinterService, PrinterDocument, PrinterDocumentItem, Breadcrumb, BreadcrumbItem } from '@navaco/mcb-infra';
+import { McbDate, PrinterService, PrinterDocument, PrinterDocumentItem, Breadcrumb, BreadcrumbItem } from '@app/ng-infra';
 
 @Component({
   selector: 'app-printer-test',

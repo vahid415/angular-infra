@@ -4,7 +4,7 @@ import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbItems
-} from '@navaco/mcb-infra';
+} from '@app/ng-infra';
 import { Service1 } from '../../../common/services/service1';
 import { ActivatedRoute } from '@angular/router';
 import { TooltipDirective } from '@progress/kendo-angular-tooltip';

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { GenericCrudService } from '@navaco/mcb-infra';
+import { GenericCrudService } from '@app/ng-infra';
 
 import { TestMngDTO } from './test-mng.model';
 import { Subsystem1Http } from '../../common/services/http';

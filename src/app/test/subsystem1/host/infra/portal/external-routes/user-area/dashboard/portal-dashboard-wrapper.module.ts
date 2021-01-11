@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { DashboardModule } from '@navaco/mcb-infra';
+import { DashboardModule } from '@app/ng-infra';
 
 @NgModule({
   imports: [DashboardModule],

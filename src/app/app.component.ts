@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'mcb-infra-app';
+  title = 'ng-infra-app';
   num = 20;
 
   constructor() { }

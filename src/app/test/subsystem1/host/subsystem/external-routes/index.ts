@@ -1,4 +1,4 @@
-import { SubsystemExternalRouteConfig } from '@navaco/mcb-infra';
+import { SubsystemExternalRouteConfig } from '@app/ng-infra';
 import { SubsystemContextComponent, SubsystemRootComponent } from '../../../lib/public.api';
 
 export default {

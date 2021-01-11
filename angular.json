@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mcb-infra-app": {
+    "ng-infra-app": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/mcb-infra-app",
+            "outputPath": "dist/ng-infra-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,19 +62,19 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "mcb-infra-app:build",
+            "browserTarget": "ng-infra-app:build",
             "proxyConfig": "proxy.json"
           },
           "configurations": {
             "production": {
-              "browserTarget": "mcb-infra-app:build:production"
+              "browserTarget": "ng-infra-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "mcb-infra-app:build"
+            "browserTarget": "ng-infra-app:build"
           }
         },
         "test": {
@@ -111,48 +111,48 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "mcb-infra-app:serve"
+            "devServerTarget": "ng-infra-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "mcb-infra-app:serve:production"
+              "devServerTarget": "ng-infra-app:serve:production"
             }
           }
         }
       }
     },
-    "mcb-infra-lib": {
+    "ng-infra-lib": {
       "projectType": "library",
-      "root": "projects/mcb-infra-lib",
-      "sourceRoot": "projects/mcb-infra-lib/src",
+      "root": "projects/ng-infra-lib",
+      "sourceRoot": "projects/ng-infra-lib/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/mcb-infra-lib/tsconfig.lib.json",
-            "project": "projects/mcb-infra-lib/ng-package.json"
+            "tsConfig": "projects/ng-infra-lib/tsconfig.lib.json",
+            "project": "projects/ng-infra-lib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/mcb-infra-lib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ng-infra-lib/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/mcb-infra-lib/src/test.ts",
-            "tsConfig": "projects/mcb-infra-lib/tsconfig.spec.json",
-            "karmaConfig": "projects/mcb-infra-lib/karma.conf.js"
+            "main": "projects/ng-infra-lib/src/test.ts",
+            "tsConfig": "projects/ng-infra-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-infra-lib/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/mcb-infra-lib/tsconfig.lib.json",
-              "projects/mcb-infra-lib/tsconfig.spec.json"
+              "projects/ng-infra-lib/tsconfig.lib.json",
+              "projects/ng-infra-lib/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -162,7 +162,7 @@
       }
     }
   },
-  "defaultProject": "mcb-infra-app",
+  "defaultProject": "ng-infra-app",
   "cli": {
     "analytics": false
   }

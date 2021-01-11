@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PortalLoginAreaModule } from '@navaco/mcb-infra';
+import { PortalLoginAreaModule } from '@app/ng-infra';
 
 @NgModule({
   exports: [PortalLoginAreaModule]

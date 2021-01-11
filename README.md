@@ -1,1 +1,1 @@
-# McbInfraApp
+# NgInfraApp

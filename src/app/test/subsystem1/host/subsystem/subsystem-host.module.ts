@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { SubsystemManager } from '@navaco/mcb-infra';
+import { SubsystemManager } from '@app/ng-infra';
 import externalRoutes from './external-routes';
 import subsystem from '../../lib/subsystem';
 

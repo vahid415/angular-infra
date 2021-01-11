@@ -1,4 +1,4 @@
-import { Subsystem } from '@navaco/mcb-infra';
+import { Subsystem } from '@app/ng-infra';
 import faIRDict from './dictionaries/dictionary.fa-ir';
 import enUSDict from './dictionaries/dictionary.en-us';
 import menuItems from './menu-items';

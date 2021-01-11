@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { PortalLayoutComponent, McbRoutes, McbRouterModule } from '@navaco/mcb-infra';
+import { PortalLayoutComponent, McbRoutes, McbRouterModule } from '@app/ng-infra';
 
 const routes: McbRoutes = [
   {

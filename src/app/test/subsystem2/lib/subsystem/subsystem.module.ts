@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { SubsystemRootComponent } from './subsystem-root.component';
 import { SubsystemContextComponent } from './subsystem-context.component';
-import { InfrastructureModule } from '@navaco/mcb-infra';
+import { InfrastructureModule } from '@app/ng-infra';
 
 @NgModule({
   declarations: [

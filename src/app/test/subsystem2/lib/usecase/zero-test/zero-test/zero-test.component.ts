@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Breadcrumb, BreadcrumbItem } from '@navaco/mcb-infra';
+import { Breadcrumb, BreadcrumbItem } from '@app/ng-infra';
 
 @Component({
   selector: 'app-zero-test',

@@ -16,8 +16,8 @@
       "dom"
     ],
     "paths": {
-      "@navaco/mcb-infra": [
-        "projects/mcb-infra-lib/src/public-api",
+      "@app/ng-infra": [
+        "projects/ng-infra-lib/src/public-api",
       ]   
     }
   },

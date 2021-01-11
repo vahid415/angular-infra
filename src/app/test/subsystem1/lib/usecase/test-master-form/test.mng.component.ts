@@ -3,7 +3,7 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import {
   BaseMasterPageController, FilterOperation, MasterFormPermission, MasterGridOption, McbGridColumnType,
   TranslatorService
-} from '@navaco/mcb-infra';
+} from '@app/ng-infra';
 import { map } from 'rxjs/operators';
 
 import { TestMngService } from './test-mng.service';
