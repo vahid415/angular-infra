@@ -1,0 +1,23 @@
+<div class="mcb-lookup2-wrapper mcb-lookup2-area">
+    <input kendoTextBox [disabled]="disabled || _resolving" [(ngModel)]="text" (blur)="_onBlur($event)"
+        (keyup)=_onKeyUp($event) />
+
+    <button type="button" kendoButton (click)="_onSearch()" class="search" [disabled]="disabled || _resolving">
+        <span class="k-icon k-i-search text-muted"></span>
+    </button>
+</div>
+
+<kendo-window kendoWindowContainer size="size" [minWidth]="_width" title={{title}} *ngIf="_open" [top]="20"
+    (close)=(popupClose())>
+    <ng-content></ng-content>
+    <footer class="popup-footer">
+        <button type="button" kendoButton class="popup-button" [disabled]="ConfirmDisabled" (click)="_onConfirm()">
+            تایید
+            <span class="k-icon k-i-check text-muted"></span>
+        </button>
+        <button type="button" kendoButton class="popup-button" (click)="_onCancel($event)"> {{'cancel' | translator}}
+            <span class="k-icon k-i-close text-muted"></span>
+        </button>
+    </footer>
+</kendo-window>
+<div class="k-overlay" *ngIf="_open"></div>

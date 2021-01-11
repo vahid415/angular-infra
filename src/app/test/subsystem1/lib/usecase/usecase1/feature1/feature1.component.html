@@ -1,0 +1,129 @@
+<mcb-main-panel [title]="'jsjs'">
+  <form mcbForm #customerSearchForm="ngForm">
+    <mcb-form-group title="{{'cf-customer-search'}}" [expanded]="true">
+      <mcb-row>
+        <mcb-column [col_md]="3">
+          <mcb-form-control labelKey="cf-passing">
+            <input kendoTextBox id="customerId" name="cf-customer-number" [(ngModel)]="customerId" dir="ltr"
+                   [maxlength]="17" pattern="[0-9]+">
+          </mcb-form-control>
+        </mcb-column>
+        <mcb-column [col_md]="3">
+          <mcb-form-control [label]="'national-Id'">
+            <input kendoTextBox id="nationalCode" name="national-Id" [(ngModel)]="nationalCode" dir="ltr"
+                   pattern="[0-9]+" [minLength]="10" [maxlength]="10" mcbNationalCodeValidator>
+          </mcb-form-control>
+        </mcb-column>
+        <mcb-column [col_md]="3">
+          <mcb-form-control [label]="'customer-status'">
+            <kendo-dropdownlist id="realCustomerStatus" name="customer-status" [valueField]="'key'"
+                                [textField]="'value'" [valuePrimitive]="true" [(ngModel)]="realCustomerStatus"
+                                [defaultItem]="defaultItem" [data]="realCustomerStatusValues">
+            </kendo-dropdownlist>
+          </mcb-form-control>
+        </mcb-column>
+
+
+        <mcb-column [col_md]="3">
+          <mcb-form-control [label]="'cf-birthDate'">
+            <mcb-date-picker id="birthDate" name="cf-birthDate" [(ngModel)]="birthDate" mode="day">
+            </mcb-date-picker>
+          </mcb-form-control>
+        </mcb-column>
+
+        <mcb-column [col_md]="3">
+          <mcb-form-control [label]="'legalCustomer-branchIndex'">
+            <input kendoTextBox id="branchIndex" name="legalCustomer-branchIndex" maxlength="5" dir="ltr"
+                   pattern="[0-9]*" [(ngModel)]="branchIndex">
+          </mcb-form-control>
+        </mcb-column>
+
+      </mcb-row>
+      <mcb-form-action>
+        <button kendoButton [icon]="'search'" [disabled]="customerSearchForm.invalid"
+                type="submit">جستجو</button>
+      </mcb-form-action>
+    </mcb-form-group>
+  </form>
+  <button kendoButton (click)="callService()">Call Service</button>
+
+  <!-- <button kendoButton (click)="permission = (permission === '/' ? 'dsfs' : 'dfgga') ">Change Permission</button> -->
+  <p *mcbPermission="['/d', 'sd']">some element</p>
+  <button kendoButton (click)="showToast()">Show Toast</button>
+  <button kendoButton (click)="changeBreadcrumb()">Change Breadcrumb</button>
+  <!-- <button kendoButton (click)="showLoading()">Show Loading</button> -->
+  <!-- <button kendoButton (click)="showConfirmation()">Show Confirmation</button> -->
+  <!-- <button kendoButton (click)="showWindow">Show Window</button> -->
+  <!-- <button kendoButton (click)="generateException()">Generate Exception</button> -->
+
+
+  <input type="text" kendoTextBox value="12345676" readonly>
+  <ng-template #template let-anchor>
+    <span>{{ anchor.nativeElement.innerText }}</span>
+  </ng-template>
+
+  <kendo-grid kendoTooltip showOn="none" [tooltipTemplate]="template" [data]="grid.data"
+              [pageSize]="grid.pageSize" [skip]="grid.skip" [filterable]="grid.filterable" [sortable]="true"
+              [sort]="grid.sort" [scrollable]="grid.scrollable" [selectable]="{ mode: 'single'}"
+              [resizable]="true" [mcbGridTooltip]="tooltipDir"
+              [pageable]="{buttonCount: 5, type: 'numeric', info: true, pageSizes: true, previousNext: true}">
+    <kendo-grid-column [sortable]="false" width="40">
+      <ng-template kendoGridCellTemplate let-rowIndex="rowIndex">
+        {{rowIndex + 1}}
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column [field]="'code'" [title]="'کد بانک'" width="70"></kendo-grid-column>
+    <kendo-grid-column [field]="'name'" [title]="'نام بانک'" width="150"></kendo-grid-column>
+    <kendo-grid-column [field]="'bankTypeTitle'" [title]="'نوع بانک'" [sortable]="false" width="150">
+    </kendo-grid-column>
+    <kendo-grid-column [field]="'status'" [title]="'وضعیت'" width="90">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        {{dataItem.status}}
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-command-column title="{{'operations'}}" width="120">
+      <ng-template kendoGridCellTemplate let-row>
+        <button kendoButton kendoTooltip type="button" [title]="'edit'"
+                [iconClass]="'fa fa-edit green'"></button>
+        <button kendoButton kendoTooltip type="button" [title]="'view_button'"
+                [iconClass]="'fa fa-eye orange'"></button>
+      </ng-template>
+    </kendo-grid-command-column>
+
+  </kendo-grid>
+
+
+
+
+
+  <kendo-grid kendoTooltip [mcbGridTooltip]="tooltipDir" [tooltipTemplate]="template" [data]="grid2.data" [pageSize]="grid2.pageSize"
+              [skip]="grid2.skip" [filterable]="grid2.filterable" [sortable]="true" [sort]="grid2.sort"
+              [scrollable]="grid2.scrollable" [selectable]="{ mode: 'single'}" [resizable]="true"
+              [pageable]="{buttonCount: 5, type: 'numeric', info: true, pageSizes: true, previousNext: true}">
+    <kendo-grid-column [sortable]="false" width="40">
+      <ng-template kendoGridCellTemplate let-rowIndex="rowIndex">
+        {{rowIndex + 1}}
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-column [field]="'code'" [title]="'کد بانک'" width="70"></kendo-grid-column>
+    <kendo-grid-column [field]="'bankTypeTitle'" [title]="'نوع بانک'" [sortable]="false" width="150">
+    </kendo-grid-column>
+    <kendo-grid-column [field]="'status'" [title]="'وضعیت'" width="90">
+      <ng-template kendoGridCellTemplate let-dataItem>
+        {{dataItem.status}}
+      </ng-template>
+    </kendo-grid-column>
+    <kendo-grid-command-column title="{{'operations'}}" width="120">
+      <ng-template kendoGridCellTemplate let-row>
+        <button kendoButton kendoTooltip type="button" [title]="'edit'"
+                [iconClass]="'fa fa-edit green'"></button>
+        <button kendoButton kendoTooltip type="button" [title]="'view_button'"
+                [iconClass]="'fa fa-eye orange'"></button>
+      </ng-template>
+    </kendo-grid-command-column>
+
+  </kendo-grid>
+</mcb-main-panel>
+
+
+

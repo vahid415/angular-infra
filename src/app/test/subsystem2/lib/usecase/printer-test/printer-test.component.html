@@ -1,0 +1,46 @@
+<mcb-main-panel title="{{'cardInformation' | translator}}">
+    <form mcbForm #form="ngForm" (do)="PrinteCard()">
+
+        <mcb-row>
+            <mcb-column col_md="4">
+
+                <mcb-form-control labelKey='cardNumber'>
+                    <input kendoTextBox name="cardNo" maxlength="16" [(ngModel)]="cardNo" mcbOnlyNumber 
+                        (blur)="onPreviewClick()" >
+                </mcb-form-control>
+
+                <mcb-form-control labelKey='ibanNumber'>
+                    <input kendoTextBox name="sheba" maxlength="24" [(ngModel)]="sheba" mcbOnlyNumber  (blur)="onPreviewClick()">
+                </mcb-form-control>
+
+                <mcb-form-control labelKey='fullName'>
+                    <mcb-persian-input kendoTextBox name='name' [(ngModel)]="name" (focusout)="onPreviewClick()" >
+                    </mcb-persian-input>
+                </mcb-form-control>
+
+                <mcb-form-control labelKey='expireDate'>
+                    <mcb-date-picker name="expireDate" [min]="currentDate" [(ngModel)]="expireDate" (focusout)="onPreviewClick()">
+                    </mcb-date-picker>
+                </mcb-form-control>
+
+                <mcb-form-control labelKey="CVV2">
+                    <input kendoTextBox name='cvv2' minlength="3" maxlength="4" [(ngModel)]="cvv2" mcbOnlyNumber (blur)="onPreviewClick()">
+                </mcb-form-control>
+
+            </mcb-column>
+            <mcb-column col_md="8">
+                <mcb-form-group title="پیش نمایش چاپ کارت" [expanded]="true">
+                    <div class="text-center">
+                        <img height="216px" width="338 px" [src]="preview" alt="">
+                    </div>
+
+                </mcb-form-group>
+            </mcb-column>
+        </mcb-row>
+
+        <button kendoButton type="button" (click)="onPreviewClick()" class="ml-2" [disabled]="form.invalid || inPrintingProcess"
+            [primary]="true">{{'preview' | translator}}</button>
+        <button kendoButton type="submit" [disabled]="form.invalid || inPrintingProcess" [primary]="true">{{'print' | translator}}</button>
+
+    </form>
+</mcb-main-panel>

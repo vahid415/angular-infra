@@ -1,0 +1,32 @@
+<kendo-panelbar class="mcb-toast-item-panelBar">
+  <kendo-panelbar-item [expanded]="true" [title]="null">
+    <ng-template kendoPanelBarItemTitle>
+      <span style="text-align: left;" class="item-title">Exception Details</span>
+    </ng-template>
+    <ng-template kendoPanelBarContent>
+      <div style="text-align: left; direction: ltr">
+        <div style="display: block"><b>message : </b><span>{{data.message}}</span></div>
+        <div style="display: block"><b>code : </b><span>{{data.code}}</span></div>
+        <div style="display: block"><b>suggestion : </b><span>{{data.suggestion}}</span></div>
+        <div style="display: block"><b>httpStatus : </b><span>{{data.httpStatus}}</span></div>
+        <div style="display: block"><b>exceptionMessage : </b><span>{{data.exceptionMessage}}</span></div>
+      </div>
+    </ng-template>
+  </kendo-panelbar-item>
+</kendo-panelbar>'
+<kendo-panelbar class="mcb-toast-item-panelBar" *ngFor="let item of data.stackTrace">
+  <kendo-panelbar-item [title]="null">
+    <ng-template kendoPanelBarItemTitle>
+      <span style="text-align: left;" class="item-title">{{item.fileName}}</span>
+    </ng-template>
+    <ng-template kendoPanelBarContent>
+      <div style="text-align: left; direction: ltr">
+        <div style="display: block"><b>methodName : </b><span class="item-title">{{item.methodName}}</span></div>
+        <div style="display: block"><b>fileName : </b><span class="item-title">{{item.fileName}}</span></div>
+        <div style="display: block"><b>lineNumber : </b><span class="item-title">{{item.lineNumber}}</span></div>
+        <div style="display: block"><b>className : </b><span class="item-title">{{item.className}}</span></div>
+        <div style="display: block"><b>nativeMethod : </b><span class="item-title">{{item.nativeMethod}}</span></div>
+      </div>
+    </ng-template>
+  </kendo-panelbar-item>
+</kendo-panelbar>'

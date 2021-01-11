@@ -1,0 +1,13 @@
+<mcb-main-panel title="{{'fee' | translator}}">
+    <form mcbForm #form="ngForm">
+
+        <mcb-row>
+            <mcb-column col_md="4">
+
+                <mcb-form-control labelKey='fee'>
+                    <input kendoTextBox name="fee" [(ngModel)]="fee" mcbOnlyNumber>
+                </mcb-form-control>
+            </mcb-column>
+        </mcb-row>
+    </form>
+</mcb-main-panel>

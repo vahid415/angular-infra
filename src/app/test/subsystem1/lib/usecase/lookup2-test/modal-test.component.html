@@ -1,0 +1,11 @@
+<form mcbForm #form="ngForm">
+  <mcb-form-control label="code">
+    <input mcbOnlyNumber type="text" name="testCode" class="hhh" kendoTextBox [(ngModel)]="testCode" >
+  </mcb-form-control>
+  <mcb-form-control label="number">
+    <mcb-lookup mcbOnlyNumber name="testNumber" [(ngModel)]="testNumber" valueField="code" textField="name">
+    </mcb-lookup>
+  </mcb-form-control>
+  <button type="button" (click)="emitEvent()">testBtn</button>
+  {{form.status}}
+</form>

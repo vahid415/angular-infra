@@ -1,0 +1,14 @@
+{
+  "/api": {
+      "target": "http://localhost:9092",
+      "secure": false
+  },
+  "/auth": {
+      "target": "http://localhost:9092",
+      "secure": false
+  },
+  "/resource": {
+      "target": "http://localhost:9092",
+      "secure": false
+  }
+}

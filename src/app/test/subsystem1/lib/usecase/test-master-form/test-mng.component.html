@@ -1,0 +1,116 @@
+<!-- <div>
+  <tbody>
+    <tr *ngFor="let item of lists">
+      <td>
+        {{item.id}}
+      </td>
+    </tr>
+  </tbody>
+  <button kendoButton title="{{'show' | translator}}" (click)="getList()" iconClass="fa fa-eye orange">
+
+  </button>
+</div> -->
+
+<mcb-master-form [(value)]="selectedMasterEntity" [controller]="this" [permission]='permissions'
+                 (selectionChange)="test($event)" [operationTemplate]="operationTemplate"
+                 [detailTemplate]="detailTemplate">
+  <form search-items #searchForm='ngForm'>
+    <mcb-row>
+      <mcb-column col_md="3">
+        <mcb-form-control labelKey="characterSeries">
+          <input kendoTextBox [(ngModel)]="searchFilter[0].value" name="code"
+                 (keyup)="$event.keyCode === 13 ? startSearch(): null" />
+        </mcb-form-control>
+      </mcb-column>
+      <mcb-column col_md="3">
+        <mcb-form-control labelKey="seriesFrom">
+          <input kendoTextBox [(ngModel)]="searchFilter[1].value" name="title" />
+        </mcb-form-control>
+      </mcb-column>
+      <mcb-column col_md="3">
+        <mcb-form-control labelKey="seriesTo">
+          <input kendoTextBox [(ngModel)]="searchFilter[2].value" name="active" />
+        </mcb-form-control>
+      </mcb-column>
+      <mcb-column [col_md]="'3'">
+        <mcb-form-control [label]="'channel-active' | translator">
+          <kendo-dropdownlist id="search-channel-active" name="search-channel-active" [valueField]="'value'"
+                              [textField]="'key'" [valuePrimitive]="true" [data]="channelStatusValues"
+                              [defaultItem]="defaultItem" [(ngModel)]="searchFilter[3].value">
+          </kendo-dropdownlist>
+        </mcb-form-control>
+      </mcb-column>
+    </mcb-row>
+  </form>
+
+  <div addEdit-items>
+    <form #editForm="ngForm">
+      <mcb-row>
+        <mcb-column col_md="3">
+          <mcb-form-control labelKey="characterSeries">
+            <input kendoTextBox [(ngModel)]="selectedMasterEntity.characterSeries" required name="characterSeries"
+                   [disabled]="viewMode" />
+          </mcb-form-control>
+        </mcb-column>
+        <mcb-column col_md="3">
+          <mcb-form-control labelKey="serialFrom">
+            <input kendoTextBox type="number" [(ngModel)]="selectedMasterEntity.serialFrom" [disabled]="viewMode"
+                   name="serialFrom" />
+          </mcb-form-control>
+        </mcb-column>
+        <mcb-column col_md="3">
+          <mcb-form-control labelKey="serialTo">
+            <input kendoTextBox type="number" [(ngModel)]="selectedMasterEntity.serialTo" name="serialTo"
+                   [disabled]="viewMode" />
+          </mcb-form-control>
+        </mcb-column>
+        <mcb-column col_md="3">
+          <mcb-form-control labelKey="seriesFrom">
+            <input kendoTextBox type="number" [(ngModel)]="selectedMasterEntity.seriesFrom" name="seriesFrom"
+                   [disabled]="viewMode" />
+          </mcb-form-control>
+        </mcb-column>
+        <mcb-column col_md="3">
+          <mcb-form-control labelKey="replica">
+            <mcb-checkbox name="replica" [(ngModel)]="selectedMasterEntity.replica" [disabled]="viewMode">
+            </mcb-checkbox>
+          </mcb-form-control>
+        </mcb-column>
+      </mcb-row>
+    </form>
+  </div>
+</mcb-master-form>
+
+<ng-template #operationTemplate let-item="row">
+  <!-- <button kendoButton kendoTooltip title="{{'delete' | translator}}"
+    [disabled]="item.id !== masterFormComponent.selectedRow.id || gridOption.selectable.mode === 'multiple'"
+    iconClass="fa fa-trash-alt red" (click)="beforeDeleteSelectedEntity(item)"></button>
+    <button kendoButton kendoTooltip title="{{'show' | translator}}"
+    [disabled]="item.id !== masterFormComponent.selectedRow.id || gridOption.selectable.mode === 'multiple'"
+    iconClass="fa fa-eye orange" (click)="beforeOpenShowPanel(item)"></button> -->
+  <button kendoButton kendoTooltip title="{{'edit' | translator}}"
+          [disabled]="item.id !== masterFormComponent.selectedRow.id || gridOption.selectable.mode === 'multiple'"
+          iconClass="fa fa-edit green" (click)="beforeEditSelectedEntity(item)"></button>
+  <mcb-toggle kendoButton kendoTooltip title="{{'edit' | translator}}"
+              [disabled]="item.id !== masterFormComponent.selectedRow.id" [(checked)]="item.active"
+              (change)="beforeChangeToggle('status', item)" kendoTooltip>
+  </mcb-toggle>
+</ng-template>
+
+<ng-template #detailTemplate let-item="row">
+  <div>
+    <strong>
+      {{'roles' | translator}}:
+    </strong>
+    <span *ngFor="let x of item.roles">
+      {{x }} {{'-'}}
+    </span>
+  </div>
+
+  <div class="row">
+    <div class="pr-2">
+      <p dir="rtl"><strong>{{'insertDate' |translator}}:</strong>
+        {{item.insertDate | mcbJalaliDate}}</p>
+    </div>
+  </div>
+</ng-template>
