@@ -1,6 +1,6 @@
 {
-    "name": "@app/ng-infra",
-    "version": "1.43.5",
+    "name": "vahid-infra",
+    "version": "1.0.1",
     "peerDependencies": {
         "@angular/common": "^9.0.5",
         "@angular/core": "^9.0.5",

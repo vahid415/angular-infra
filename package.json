@@ -1,5 +1,5 @@
 {
-  "name": "@app/ng-infra-app",
+  "name": "ng-infra-app",
   "version": "1.0.0",
   "scripts": {
     "start": "ng serve",
@@ -8,9 +8,11 @@
     "build-publish-lib": "npm run build-lib && npm run publish-lib",
     "build-app": "ng build",
     "npm-set-registry-default": "npm config set registry=https://registry.npmjs.org",
+    "npm-set-registry-localhost": "npm config set registry=http://10.12.126.2:9000/",
     "npm-login": "npm login"
   },
-  "private": true,
+  
+  "private": false,
   "dependencies": {
     "@angular/animations": "~9.0.5",
     "@angular/cdk": "^9.0.0",
