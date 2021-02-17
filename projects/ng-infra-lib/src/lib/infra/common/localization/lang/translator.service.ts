@@ -19,7 +19,7 @@ export class TranslatorService {
 
   constructor(
     private languageService: LanguageService,
-    @Inject(Subsystem) @Optional() private subsystem: Subsystem,
+    @Optional() private subsystem: Subsystem,
     private dictService: DictionaryService
   ) {
     this.locale = languageService.locale;
