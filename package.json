@@ -2,7 +2,7 @@
   "name": "ng-infra-app",
   "version": "1.0.0",
   "scripts": {
-    "start": "ng serve",
+    "start": "ng serve --port=4210",
     "build-lib": "ng build ng-infra-lib --prod",
     "publish-lib": "npm publish dist/ng-infra-lib",
     "build-publish-lib": "npm run build-lib && npm run publish-lib",

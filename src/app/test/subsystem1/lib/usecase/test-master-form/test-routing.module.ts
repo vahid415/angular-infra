@@ -5,6 +5,10 @@ import { NgModule } from '@angular/core';
 export const routes: NgRoutes = [{
   path: '',
   component: TestMngComponent,
+  children: [{
+    path: 'add',
+    loadChildren: () => import('./layze/lazy.module').then(m => m.LazyModule)
+  }]
 }
 ];
 
