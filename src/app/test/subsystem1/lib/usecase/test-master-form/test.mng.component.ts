@@ -79,18 +79,27 @@ export class TestMngComponent extends BaseMasterPageController implements AfterV
 
   initDataGridColumns() {
     this.addMasterGridColumn({
-      field: 'characterSeries',
+      field: 'name',
     });
     this.addMasterGridColumn({
-      field: 'serialFrom',
-      format: '{0:c}',
+      field: 'id',
     });
     this.addMasterGridColumn({
-      field: 'seriesFrom',
+      field: 'age',
     });
     this.addMasterGridColumn({
-      field: 'replica',
+      field: 'gender',
       type: NgGridColumnType.TOGGLE,
+      cellTemplate: (cellElement, cellInfo) => {
+        switch (cellInfo.gender) {
+          case 'male':
+            return  'true';
+          case 'female':
+            return 'false';
+          default:
+            return 'نا مشخص';
+        }
+      }
     });
 
     // this.addMasterGridColumn({

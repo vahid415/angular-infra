@@ -145,11 +145,16 @@ export class MasterFormComponent implements OnInit {
     //   this.controller.masterFormService.firstLoad = false;
     // }
     this.pagingReq.filters = this.controller.searchFilter;
-    this.controller.masterFormService.getPage(this.pagingReq).subscribe((res: PagingResponse) => {
+    this.controller.masterFormService.fetchGridData(this.pagingReq).subscribe((res: any) => {
       this.gridOption.gridData.data = res.data;
-      this.gridOption.gridData.total = res.size;
+      this.gridOption.gridData.total = res.totalElements;
       this.cdr.detectChanges();
     });
+    // this.controller.masterFormService.getPage(this.pagingReq).subscribe((res: PagingResponse) => {
+    //   this.gridOption.gridData.data = res.data;
+    //   this.gridOption.gridData.total = res.size;
+    //   this.cdr.detectChanges();
+    // });
   }
   /*
    * when click on refresh Button in main panel this method called

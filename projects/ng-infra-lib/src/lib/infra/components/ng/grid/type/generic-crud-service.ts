@@ -5,8 +5,35 @@ import { InfraHttp } from './http';
 import { CrudOperations } from './crud-operations.interface';
 import { PagingResponse } from '../../../../common/types/paging-response.dto';
 import { PagingRequest } from '../../../../common/types/paging-request.dto';
+import { map } from 'rxjs/operators';
+import { mockData } from './100k';
+import { of } from 'rxjs';
 
+export class Employee {
+  id: number;
+  name: string;
+  gender: string;
+  address: string;
+  nationalCode: string;
+  age: number;
 
+  constructor(id: number, name: string, gender: string, address: string, nationalCode: string, age: number) {
+      this.name = name;
+      this.gender = gender;
+      this.address = address;
+      this.age = age;
+      this.nationalCode = nationalCode;
+      this.id = id;
+  }
+}
+export class PagedData<T> {
+  // eslint-disable-next-line no-array-constructor
+  data = new Array<T>();
+  totalElements: number;
+  pageSize: number;
+  totalPage: number;
+  pageNumber: number;
+}
 export abstract class GenericCrudService implements CrudOperations {
 
   firstLoad = false;
@@ -82,5 +109,31 @@ export abstract class GenericCrudService implements CrudOperations {
     entity.filters = arr;
     return this.http.post<PagingResponse>(`${this.baseUrl}${FIND_PAGING_URL}`, entity);
   }
+
+  fetchGridData(page: any): Observable<any> {
+    // return of(mockData);
+    return of(mockData).pipe(map(d => this.getPagedData(page)));
+}
+private getPagedData(page: any): any {
+  debugger
+    const pagedData = new PagedData<any>();
+    page.totalElements = mockData.data.length;
+    page.totalPage = page.totalElements / page.size;
+    const start = page.start * page.size;
+    const end = Math.min(start + page.size, page.totalElements);
+    // eslint-disable-next-line no-plusplus
+    for (let i = start; i < end; i++) {
+        const jsonObj = mockData.data[i];
+        const employee = new Employee(
+            jsonObj.id, jsonObj.name, jsonObj.gender, jsonObj.address.state, jsonObj.nationalCode, jsonObj.age
+        );
+        pagedData.data.push(employee);
+    }
+    pagedData.pageSize = page.size;
+    pagedData.totalPage = page.totalPage;
+    pagedData.totalElements = page.totalElements;
+    pagedData.pageNumber = page.start;
+    return pagedData;
+}
 
 }
