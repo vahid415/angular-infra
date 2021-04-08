@@ -49,7 +49,7 @@ data: any = null;
         this.changePasswordService.updatePassword(this.model)
             .subscribe(x => {
                 const msg = 'saved';
-                this.toastService.success({ message: msg, title: msg });
+                // this.toastService.success({ message: msg, title: msg });
             });
     }
 

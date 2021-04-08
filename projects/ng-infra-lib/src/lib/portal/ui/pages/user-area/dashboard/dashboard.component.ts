@@ -1,16 +1,14 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { DataStateChangeEvent } from '@progress/kendo-angular-grid';
+import { Router } from '@angular/router';
+import { interval, Subscription } from 'rxjs';
+import { Component, OnDestroy } from '@angular/core';
 import { DashboardService } from './dashboard.service';
-import { Router, ActivatedRoute } from '@angular/router';
-import { Breadcrumb } from '../../../../decorators/breadcrumb.decorator';
-import { BreadcrumbItem } from '../../../../decorators/types';
-import { NG_VALUE_ACCESSOR, NG_VALIDATORS } from '@angular/forms';
 import { NgbCalendar, NgbDatepickerI18n, NgbCalendarPersian } from '@ng-bootstrap/ng-bootstrap';
+
+import { BreadcrumbItem } from '../../../../decorators/types';
+import { Breadcrumb } from '../../../../decorators/breadcrumb.decorator';
+import { NgDate } from '../../../../../infra/common/localization/date/date';
 import { UserIdentityService } from '../../../../security/authentication/user-identity.service';
 import { NgbDatepickerI18nPersian } from '../../../../../infra/common/localization/date/ngb-date-picker-i18n-persian';
-import { NgDate } from '../../../../../infra/common/localization/date/date';
-import { interval, Subscription } from 'rxjs';
-import { now } from 'moment-jalaali';
 
 @Component({
     selector: 'ng-dashboard',

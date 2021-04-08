@@ -91,6 +91,9 @@ export interface ToastData {
   message?: string;
   validationMessages?: string[];
   type?: ToastType;
+  toastStyle: string;
+  showStackError: boolean;
+  showError: boolean;
   stackTrace?: StackTraceExceptionDto;
 }
 
